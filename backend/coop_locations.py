@@ -189,10 +189,10 @@ def getCoopLocations(locationName, search_radius=10):
         print(f'Failed to write data to {outputPath}: {e}')
         
     
-    return {
-        'OriginCoordinates': {'Latitude': lat, 'Longitude': lng},
-        'CoopLocations': qualified_coops
-    }
+    return (
+        {'Latitude': lat, 'Longitude': lng},
+        qualified_coops
+    )
 
 getCoopLocations("Pratteln")
 
