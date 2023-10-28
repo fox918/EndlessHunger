@@ -3,19 +3,16 @@ from geopy.geocoders import Nominatim
 import json
 from datetime import datetime
 
-# Set the number of nearby Coop locations to retrieve
-numNearbyCoop = 10
-
-def getCoopLocations(villageName):
+def getCoopLocations(locationName, numCoops):
     geolocator = Nominatim(user_agent="CoopFinder")
-    location = geolocator.geocode(f'{villageName}, Switzerland')
+    location = geolocator.geocode(f'{locationName}, Switzerland')
     if location is None:
-        print(f'No location found for {villageName}, Switzerland')
+        print(f'No location found for {locationName}, Switzerland')
         return
     lat, lng = location.latitude, location.longitude
     print(f'Coordinates: ({lat}, {lng})')
 
-    url = f"https://www.coop.ch/de/unternehmen/standorte-und-oeffnungszeiten.getvstlist.json?lat={lat}&lng={lng}&start=1&end={numNearbyCoop}&filterFormat=+&filterAttribute=&filterOpen=false&gasIndex=0"
+    url = f"https://www.coop.ch/de/unternehmen/standorte-und-oeffnungszeiten.getvstlist.json?lat={lat}&lng={lng}&start=1&end={numCoops}&filterFormat=+&filterAttribute=&filterOpen=false&gasIndex=0"
 
     try:
         response = requests.get(url)
@@ -40,7 +37,7 @@ def getCoopLocations(villageName):
         if formatId.lower() == 'id':
             formatId = 'Interdiscount'
         zipCode = coopLocation.get('plz')
-        villageName = coopLocation.get('ort')
+        cityName = coopLocation.get('ort')
         streetName = coopLocation.get('strasse')
         houseNumber = coopLocation.get('hausnummer')
 
@@ -66,7 +63,7 @@ def getCoopLocations(villageName):
             'LogoUrl': logoUrl,
             'FormatId': formatId,
             'ZipCode': zipCode,
-            'VillageName': villageName,
+            'CityName': cityName,
             'StreetName': streetName,
             'HouseNumber': houseNumber,
             'Open': openStatus,
@@ -86,5 +83,6 @@ def getCoopLocations(villageName):
         print(f'Failed to write data to {outputPath}: {e}')
 
 # Usage
-villageName = input("Enter the name of a village, city or address in Switzerland: ")
-getCoopLocations(villageName)
+locationName = input("Enter the name of a village, city or address in Switzerland: ")
+numCoops = int(input("Enter the number of Coop locations to retrieve: "))
+getCoopLocations(locationName, numCoops)
