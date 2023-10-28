@@ -31,8 +31,8 @@ jobs:
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
           images: |
-            registry.digitalocean.com/fox918/backend-hunger:latest
-            ghcr.io/fox918/backend-hunger:latest
+            registry.digitalocean.com/fox918/backend-hunger
+            ghcr.io/fox918/backend-hunger
       - name: Build and push Docker images
         uses: docker/build-push-action@v5
         with:
