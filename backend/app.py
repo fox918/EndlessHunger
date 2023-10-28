@@ -18,5 +18,6 @@ def locations():
 @app.route('/calculations')
 
 def calculations():
-        calculationDatas = getAllRoutes("driving-car", getCoopLocations("Basel", 10))
+        originCoordinates, coopLocations = getCoopLocations("Basel", 10, time_filter=False)
+        calculationDatas = getAllRoutes("driving-car", coopLocations)
         return jsonify(calculationDatas)
