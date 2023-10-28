@@ -49,7 +49,7 @@ def getCoopLocations(locationName, search_radius=10, time_filter=True):
     def getOriginCoordinates(locationName):
         """Get the latitude and longitude of the given location name."""
         geolocator = Nominatim(user_agent="CoopFinder")
-        location = geolocator.geocode(f'{locationName}, Switzerland')
+        location = geolocator.geocode(f'{locationName}', country_codes="CH")  # Limit to Switzerland with country_codes="CH"
         if location is None:
             print(f'No location found for {locationName}, Switzerland')
             return None, None
@@ -124,14 +124,15 @@ def getCoopLocations(locationName, search_radius=10, time_filter=True):
                         openingTime, closingTime = timeRange
                         break
             
-            # Check if the coop is open now or will open soon, and remains open for at least the next 10 minutes
-            openStatus = is_open_now(coop) if time_filter else True
+            # Check if the coop is open now
+            openStatus = is_open_now(coop)
             
-            if formatId in food_offering_formats and distance <= search_radius * 1000 and openStatus:
+            if formatId in food_offering_formats and distance <= search_radius * 1000 and (not time_filter or openStatus):
                 qualified_coops.append(create_json(coop, openingTime, closingTime, openStatus))
             if len(qualified_coops) >= 10 or distance > search_radius * 1000:
                 break
         return qualified_coops
+
 
 
 
@@ -149,7 +150,7 @@ def getCoopLocations(locationName, search_radius=10, time_filter=True):
             'CityName': coop.get('ort'),
             'StreetName': coop.get('strasse'),
             'HouseNumber': coop.get('hausnummer'),
-            'Open': openStatus,
+            'Open': openStatus,   # This will be either True or False
             'OpeningTime': openingTime,
             'ClosingTime': closingTime
         }

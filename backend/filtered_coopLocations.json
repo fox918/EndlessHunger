@@ -10,9 +10,9 @@
         "CityName": "Basel",
         "StreetName": "Gerbergasse",
         "HouseNumber": "4",
-        "Open": true,
-        "OpeningTime": "08:30",
-        "ClosingTime": "17:45"
+        "Open": false,
+        "OpeningTime": null,
+        "ClosingTime": null
     },
     {
         "Name": "Coop City Basel Am Marktplatz",
@@ -25,9 +25,9 @@
         "CityName": "Basel",
         "StreetName": "Gerbergasse",
         "HouseNumber": "4",
-        "Open": true,
-        "OpeningTime": "08:30",
-        "ClosingTime": "18:00"
+        "Open": false,
+        "OpeningTime": null,
+        "ClosingTime": null
     },
     {
         "Name": "Coop Supermarkt City Basel Marktplatz Food",
@@ -40,9 +40,9 @@
         "CityName": "Basel",
         "StreetName": "Hutgasse",
         "HouseNumber": "19",
-        "Open": true,
-        "OpeningTime": "08:30",
-        "ClosingTime": "18:00"
+        "Open": false,
+        "OpeningTime": null,
+        "ClosingTime": null
     },
     {
         "Name": "Coop Supermarkt Basel Fischmärt",
@@ -55,9 +55,9 @@
         "CityName": "Basel",
         "StreetName": "Marktgasse",
         "HouseNumber": "8",
-        "Open": true,
-        "OpeningTime": "06:30",
-        "ClosingTime": "18:00"
+        "Open": false,
+        "OpeningTime": null,
+        "ClosingTime": null
     },
     {
         "Name": "Coop Supermarkt City Basel Pfauen Food",
@@ -70,9 +70,9 @@
         "CityName": "Basel",
         "StreetName": "Freie Strasse",
         "HouseNumber": "75",
-        "Open": true,
-        "OpeningTime": "08:30",
-        "ClosingTime": "18:00"
+        "Open": false,
+        "OpeningTime": null,
+        "ClosingTime": null
     },
     {
         "Name": "Coop City Basel Pfauen",
@@ -85,9 +85,9 @@
         "CityName": "Basel",
         "StreetName": "Freie Strasse",
         "HouseNumber": "75",
-        "Open": true,
-        "OpeningTime": "08:30",
-        "ClosingTime": "18:00"
+        "Open": false,
+        "OpeningTime": null,
+        "ClosingTime": null
     },
     {
         "Name": "Coop Restaurant Basel Pfauen",
@@ -100,9 +100,9 @@
         "CityName": "Basel",
         "StreetName": "Freie Strasse",
         "HouseNumber": "75",
-        "Open": true,
-        "OpeningTime": "08:30",
-        "ClosingTime": "18:00"
+        "Open": false,
+        "OpeningTime": null,
+        "ClosingTime": null
     },
     {
         "Name": "Coop Take it Basel City Pfauen",
@@ -115,9 +115,9 @@
         "CityName": "Basel",
         "StreetName": "Freie Strasse",
         "HouseNumber": "75",
-        "Open": true,
-        "OpeningTime": "08:30",
-        "ClosingTime": "18:00"
+        "Open": false,
+        "OpeningTime": null,
+        "ClosingTime": null
     },
     {
         "Name": "Coop Pronto Shop Basel Barfüsserplatz",
@@ -130,9 +130,9 @@
         "CityName": "Basel",
         "StreetName": "Streitgasse",
         "HouseNumber": "20",
-        "Open": true,
-        "OpeningTime": "06:30",
-        "ClosingTime": "22:00"
+        "Open": false,
+        "OpeningTime": "09:00",
+        "ClosingTime": "20:00"
     },
     {
         "Name": "Coop Supermarkt Basel Greifengasse",
@@ -145,8 +145,8 @@
         "CityName": "Basel",
         "StreetName": "Greifengasse",
         "HouseNumber": "3",
-        "Open": true,
-        "OpeningTime": "07:30",
-        "ClosingTime": "18:00"
+        "Open": false,
+        "OpeningTime": null,
+        "ClosingTime": null
     }
 ]
