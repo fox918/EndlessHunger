@@ -6,14 +6,14 @@ from datetime import datetime
 
 def get_unique_format_ids(lat, lng, numCoops):
     url = f"https://www.coop.ch/de/unternehmen/standorte-und-oeffnungszeiten.getvstlist.json?lat={lat}&lng={lng}&start=1&end={numCoops}&filterFormat=+&filterAttribute=&filterOpen=false&gasIndex=0"
-    
+
     try:
         response = requests.get(url)
         response.raise_for_status()
     except requests.RequestException as e:
         print(f'Failed to retrieve data: {e}')
         return
-    
+
     try:
         data = response.json()
     except json.JSONDecodeError as e:
@@ -25,7 +25,7 @@ def get_unique_format_ids(lat, lng, numCoops):
         format_id = coopLocation.get('formatId')
         if format_id:
             format_ids.add(format_id)
-    
+
     # Save the unique format IDs to a file
     with open('coop_formats.txt', 'w') as file:
         for format_id in format_ids:
@@ -47,10 +47,10 @@ def get_unique_format_ids(lat, lng, numCoops):
 def getCoopLocations(locationName, numCoops):
     def get_food_offering_formats():
         """Load the list of format IDs that offer food."""
-        with open('food_offering_formats.txt', 'r') as file:
+        with open('food_offering_formats.txt', 'r', encoding='ISO-8859-1') as file:
             formats = set(line.strip().lower() for line in file)
         return formats
-    
+
     food_offering_formats = get_food_offering_formats()
 
     geolocator = Nominatim(user_agent="CoopFinder")
@@ -138,7 +138,7 @@ def getCoopLocations(locationName, numCoops):
         print(f'Data written to {outputPath}')
     except Exception as e:
         print(f'Failed to write data to {outputPath}: {e}')
-        
+
     return coopLocations
 
 
