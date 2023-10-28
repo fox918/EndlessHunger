@@ -1,7 +1,7 @@
 import requests
 from geopy.geocoders import Nominatim
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 
 
 def get_unique_format_ids(lat, lng, numCoops):
@@ -46,6 +46,15 @@ def get_unique_format_ids(lat, lng, numCoops):
 
 def getCoopLocations(locationName, search_radius=10):
     
+    def getOriginCoordinates(locationName):
+        """Get the latitude and longitude of the given location name."""
+        geolocator = Nominatim(user_agent="CoopFinder")
+        location = geolocator.geocode(f'{locationName}, Switzerland')
+        if location is None:
+            print(f'No location found for {locationName}, Switzerland')
+            return None, None
+        return location.latitude, location.longitude
+    
     def get_food_offering_formats():
         """Load the list of format IDs that offer food."""
         with open('food_offering_formats.txt', 'r', encoding='ISO-8859-1') as file:
@@ -64,7 +73,7 @@ def getCoopLocations(locationName, search_radius=10):
             return None
 
     def is_open_now(coop):
-        """Check if the coop is open right now."""
+        """Check if the coop is open right now or within the next 30 minutes and remains open for at least the next 10 minutes."""
         now = datetime.now()
         currentDay = now.strftime("%A").upper()
         openingTime, closingTime = None, None
@@ -73,26 +82,58 @@ def getCoopLocations(locationName, search_radius=10):
                 timeRange = openingHours['time'].split(' - ')
                 if len(timeRange) == 2:
                     openingTime, closingTime = timeRange
+                    # Handle '24:00' case by converting it to '00:00'
+                    if closingTime == '24:00':
+                        closingTime = '00:00'
                     break
-        current_time_str = now.strftime('%H:%M')
-        return openingTime, closingTime, openingTime is not None and closingTime is not None and openingTime <= current_time_str <= closingTime
+    
+        if not openingTime or not closingTime:
+            return False
+    
+        # Convert times to datetime objects for easy comparison
+        opening_dt = datetime.strptime(openingTime, "%H:%M")
+        closing_dt = datetime.strptime(closingTime, "%H:%M")
+        now_time = now.time()
+        now_dt = datetime.strptime(f"{now_time.hour}:{now_time.minute}", "%H:%M")
+    
+        # Check if the store is currently open or will open within the next 30 minutes
+        open_now_or_soon = now_dt >= opening_dt or (opening_dt - now_dt) <= timedelta(minutes=30)
+    
+        # Check if the store remains open for at least the next 10 minutes from now
+        remains_open = (closing_dt - now_dt) >= timedelta(minutes=10)
+    
+        return open_now_or_soon and remains_open
+
+
 
     def filter_coops(coops, food_offering_formats):
         """Filter coops based on criteria."""
         qualified_coops = []
         for coop in coops:
             formatId = coop.get('formatId', '').lower()
-            distance_in_km = int(coop.get('distance')) / 1000
-            if formatId in food_offering_formats and distance_in_km <= search_radius:
-                openingTime, closingTime, openStatus = is_open_now(coop)
-                if openStatus:
-                    coop_json = create_json(coop, openingTime, closingTime, openStatus)
-                    qualified_coops.append(coop_json)
-            if len(qualified_coops) >= 10 or distance_in_km > search_radius:
+            distance = int(coop.get('distance'))
+            
+            # Check if the coop is open now or will open soon, and remains open for at least the next 10 minutes
+            openStatus = is_open_now(coop)
+            
+            # Determine the opening and closing times
+            openingTime, closingTime = None, None
+            now = datetime.now()
+            currentDay = now.strftime("%A").upper()
+            for openingHours in coop.get('openingHours', []):
+                if openingHours['day'] == currentDay:
+                    timeRange = openingHours['time'].split(' - ')
+                    if len(timeRange) == 2:
+                        openingTime, closingTime = timeRange
+                        break
+    
+            if formatId in food_offering_formats and distance <= search_radius * 1000 and openStatus:
+                qualified_coops.append(create_json(coop, openingTime, closingTime, openStatus))
+            if len(qualified_coops) >= 10 or distance > search_radius * 1000:
                 break
-        
-        print(f"Filtered {len(qualified_coops)} Coop locations that match the criteria.")
         return qualified_coops
+
+
 
     def create_json(coop, openingTime, closingTime, openStatus):
         """Create a JSON representation of a coop."""
@@ -113,6 +154,9 @@ def getCoopLocations(locationName, search_radius=10):
         }
 
     # Main logic of getCoopLocations
+    lat, lng = getOriginCoordinates(locationName)
+    if lat is None and lng is None:
+        return {}
     food_offering_formats = get_food_offering_formats()
 
     geolocator = Nominatim(user_agent="CoopFinder")
@@ -130,10 +174,27 @@ def getCoopLocations(locationName, search_radius=10):
         return []
 
     qualified_coops = filter_coops(coops_data.get('vstList', []), food_offering_formats)
-    print(qualified_coops)
-    return qualified_coops
+    
+    # Save the data to a JSON file
+    outputPath = 'filtered_coopLocations.json'
+    try:
+        with open(outputPath, 'w', encoding='utf-8') as f:
+            json.dump({
+                'OriginCoordinates': {'Latitude': lat, 'Longitude': lng},
+                'CoopLocations': qualified_coops
+            }, f, ensure_ascii=False, indent=4)
+        print(qualified_coops)
+        print(f'Data written to {outputPath}')
+    except Exception as e:
+        print(f'Failed to write data to {outputPath}: {e}')
+        
+    
+    return {
+        'OriginCoordinates': {'Latitude': lat, 'Longitude': lng},
+        'CoopLocations': qualified_coops
+    }
 
-getCoopLocations("Basel")
+getCoopLocations("Pratteln")
 
 
 
