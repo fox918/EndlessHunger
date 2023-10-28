@@ -30,12 +30,12 @@ jobs:
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
           images: |
-            registry.digitalocean.com/fox918/backend-hunger
-            ghcr.io/fox918/backend-hunger
+            registry.digitalocean.com/fox918/frontend-hunger
+            ghcr.io/fox918/frontend-hunger
       - name: Build and push Docker images
         uses: docker/build-push-action@v5
         with:
-          context: ./backend
+          context: ./frontend
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
