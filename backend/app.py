@@ -1,6 +1,6 @@
 #!/bin/python3
 from flask import Flask, jsonify
-from CoopLocations import getCoopLocations
+from coop_locations import getCoopLocations
 
 app = Flask(__name__)
 
