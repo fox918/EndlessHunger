@@ -22,7 +22,7 @@ def calculations():
         calculationDatas = getAllRoutes("driving-car", coopLocations)
         return jsonify(calculationDatas)
     
-@app.route('/search/<searchstring>')
+@app.route('/search/<searchstring>', methods=['GET'])
    
 def serach(searchstring):
         originCoordinates, coopLocations = getCoopLocations(searchstring, 10, time_filter=False)
