@@ -26,9 +26,9 @@ def getRoute(coopLocations, routingProfile):
         route = json.loads(call.text)  # Parse the JSON response
         print("Route calculated")
 
-        route = route + coopLocations
+        coop = {**route, **coopLocations}
 
-        return route
+        return coop
     else:
         print("Request was not successful. Status code:", call.status_code)
 
@@ -57,4 +57,4 @@ def getAllRoutes(routingProfile, coopLocations):
     else:
         print("Wrong Routing Profile", routingProfile)
 
-getAllRoutes("driving-car", coopLocations)
+ans = getAllRoutes("driving-car", coopLocations)
