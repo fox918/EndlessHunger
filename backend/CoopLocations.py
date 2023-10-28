@@ -138,6 +138,8 @@ def getCoopLocations(locationName, numCoops):
         print(f'Data written to {outputPath}')
     except Exception as e:
         print(f'Failed to write data to {outputPath}: {e}')
+        
+    return coopLocations
 
 
 getCoopLocations("Basel", 10)

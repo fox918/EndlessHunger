@@ -1,9 +1,11 @@
 #!/bin/python3
-from flask import Flask
+from flask import Flask, jsonify
+from CoopLocations import getCoopLocations
 
 app = Flask(__name__)
 
 
 @app.route('/locations')
 def locations():
-        return 'Hello, World!'
+        coopData = getCoopLocations("Basel", 10)
+        return jsonify(coopData)
