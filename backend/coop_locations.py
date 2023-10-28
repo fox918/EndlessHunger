@@ -44,7 +44,7 @@ def get_unique_format_ids(lat, lng, numCoops):
 
 
 
-def getCoopLocations(locationName, search_radius=10):
+def getCoopLocations(locationName, search_radius=10, time_filter=True):
     
     def getOriginCoordinates(locationName):
         """Get the latitude and longitude of the given location name."""
@@ -106,15 +106,12 @@ def getCoopLocations(locationName, search_radius=10):
 
 
 
-    def filter_coops(coops, food_offering_formats):
+    def filter_coops(coops, food_offering_formats, time_filter=True):
         """Filter coops based on criteria."""
         qualified_coops = []
         for coop in coops:
             formatId = coop.get('formatId', '').lower()
             distance = int(coop.get('distance'))
-            
-            # Check if the coop is open now or will open soon, and remains open for at least the next 10 minutes
-            openStatus = is_open_now(coop)
             
             # Determine the opening and closing times
             openingTime, closingTime = None, None
@@ -126,12 +123,16 @@ def getCoopLocations(locationName, search_radius=10):
                     if len(timeRange) == 2:
                         openingTime, closingTime = timeRange
                         break
-    
+            
+            # Check if the coop is open now or will open soon, and remains open for at least the next 10 minutes
+            openStatus = is_open_now(coop) if time_filter else True
+            
             if formatId in food_offering_formats and distance <= search_radius * 1000 and openStatus:
                 qualified_coops.append(create_json(coop, openingTime, closingTime, openStatus))
             if len(qualified_coops) >= 10 or distance > search_radius * 1000:
                 break
         return qualified_coops
+
 
 
 
@@ -173,28 +174,25 @@ def getCoopLocations(locationName, search_radius=10):
     if not coops_data:
         return []
 
-    qualified_coops = filter_coops(coops_data.get('vstList', []), food_offering_formats)
-    
+    qualified_coops = filter_coops(coops_data.get('vstList', []), food_offering_formats, time_filter)
+
     # Save the data to a JSON file
     outputPath = 'filtered_coopLocations.json'
     try:
         with open(outputPath, 'w', encoding='utf-8') as f:
-            json.dump({
-                'OriginCoordinates': {'Latitude': lat, 'Longitude': lng},
-                'CoopLocations': qualified_coops
-            }, f, ensure_ascii=False, indent=4)
+            json.dump(qualified_coops, f, ensure_ascii=False, indent=4)
         print(qualified_coops)
         print(f'Data written to {outputPath}')
     except Exception as e:
         print(f'Failed to write data to {outputPath}: {e}')
-        
     
+    # Return the origin coordinates and the list of qualified coops
     return (
         {'Latitude': lat, 'Longitude': lng},
         qualified_coops
     )
 
-getCoopLocations("Pratteln")
+getCoopLocations("Basel", 10, time_filter=False)
 
 
 
