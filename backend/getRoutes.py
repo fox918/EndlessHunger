@@ -57,4 +57,5 @@ def getAllRoutes(routingProfile, coopLocations):
     else:
         print("Wrong Routing Profile", routingProfile)
 
-ans = getAllRoutes("driving-car", coopLocations)
+if __name__ == '__main__':
+    ans = getAllRoutes("driving-car", coopLocations)
