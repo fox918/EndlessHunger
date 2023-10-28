@@ -143,17 +143,25 @@
         
         $(document).ready(function(){
             $("#search").click(function(){
-                $.ajax({
-                    type: 'GET',
-                    url: "/coopLocations.json",
-                    dataType: "json",
-                    success: function(data){
+                const searchTerm = $("#myInput").val().trim();
+                const onlyOpened = true;
+
+                $.getJSON(
+                    "https://basel.do.oliverwisler.ch/backend/calculations",
+                    {location:searchTerm,filter:onlyOpened},
+                     function(data){
                             console.log(data);
+                            data.forEach((element) => {
+                                const lat = parseFloat(element.Latitude);
+                                const lon = parseFloat(element.Longitude);
+                                L.geoJSON(element).addTo(map);
+
+                                L.marker([lat,lon]).addTo(map);
+                            })
                             
-                            
-                            map.setView([parseFloat(data[0].HouseNumber), 10], 12);
+                            map.flyTo([parseFloat(data[0].HouseNumber), 10]);
                     } 
-                });        
+                );        
             });
         });
         </script>
