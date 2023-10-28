@@ -1,4 +1,4 @@
-name: Create and publish a Docker image
+name: Create and publish the frontend
 
 on:
   push:
@@ -35,7 +35,7 @@ jobs:
       - name: Build and push Docker images
         uses: docker/build-push-action@v5
         with:
-          context: ./frontend
+          context: ./html
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
