@@ -49,7 +49,7 @@ def getCoopLocations(locationName, search_radius=10, time_filter=True):
     def getOriginCoordinates(locationName):
         """Get the latitude and longitude of the given location name."""
         geolocator = Nominatim(user_agent="CoopFinder")
-        location = geolocator.geocode(f'{locationName}, Switzerland')
+        location = geolocator.geocode(f'{locationName}', country_codes="CH")  # Limit to Switzerland with country_codes="CH"
         if location is None:
             print(f'No location found for {locationName}, Switzerland')
             return None, None
