@@ -3,7 +3,7 @@ import json
 import xml.etree.ElementTree as ET# Constructing the XML elements and attributes
 from coop_locations import getCoopLocations
 
-originCoordinates, coopLocations = getCoopLocations("Basel", 10)
+originCoordinates, coopLocations = getCoopLocations("Basel", 10, time_filter=False)
 
 def getRoute(coopLocations, routingProfile):
     longitude = coopLocations.get("Longitude")
@@ -25,13 +25,12 @@ def getRoute(coopLocations, routingProfile):
     if call.status_code == 200:
         route = json.loads(call.text)  # Parse the JSON response
         print("Route calculated")
-        return route
+
+        coop = {**route, **coopLocations}
+
+        return coop
     else:
         print("Request was not successful. Status code:", call.status_code)
-
-def getRouteAndData(coopLocation, routingProfile):
-    return coopLocation + getRoute(coopLocation,routingProfile)
-
 
 def getAllRoutes(routingProfile, coopLocations):
 
@@ -41,7 +40,7 @@ def getAllRoutes(routingProfile, coopLocations):
 
     elif routingProfile == "driving-car" or routingProfile == "cycling-regular" or routingProfile == "foot-walking" or routingProfile == "wheelchair":
 
-        routes = list(map(lambda x: getRouteAndData(x, routingProfile), coopLocations))
+        routes = list(map(lambda x: getRoute(x, routingProfile), coopLocations))
 
         with open('routes.json', 'w') as json_file:
             json.dump(routes, json_file, indent=4)  # Save the JSON to a file with indentation
@@ -58,4 +57,5 @@ def getAllRoutes(routingProfile, coopLocations):
     else:
         print("Wrong Routing Profile", routingProfile)
 
-getAllRoutes("driving-car", coopLocations)
+if __name__ == '__main__':
+    ans = getAllRoutes("driving-car", coopLocations)
