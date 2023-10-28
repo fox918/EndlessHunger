@@ -10,7 +10,7 @@
         "CityName": "Basel",
         "StreetName": "Gerbergasse",
         "HouseNumber": "4",
-        "Open": true,
+        "Open": false,
         "OpeningTime": "08:30",
         "ClosingTime": "17:45"
     },
@@ -25,7 +25,7 @@
         "CityName": "Basel",
         "StreetName": "Gerbergasse",
         "HouseNumber": "4",
-        "Open": true,
+        "Open": false,
         "OpeningTime": "08:30",
         "ClosingTime": "18:00"
     },
@@ -40,7 +40,7 @@
         "CityName": "Basel",
         "StreetName": "Hutgasse",
         "HouseNumber": "19",
-        "Open": true,
+        "Open": false,
         "OpeningTime": "08:30",
         "ClosingTime": "18:00"
     },
@@ -55,7 +55,7 @@
         "CityName": "Basel",
         "StreetName": "Marktgasse",
         "HouseNumber": "8",
-        "Open": true,
+        "Open": false,
         "OpeningTime": "06:30",
         "ClosingTime": "18:00"
     },
@@ -70,7 +70,7 @@
         "CityName": "Basel",
         "StreetName": "Freie Strasse",
         "HouseNumber": "75",
-        "Open": true,
+        "Open": false,
         "OpeningTime": "08:30",
         "ClosingTime": "18:00"
     },
@@ -85,7 +85,7 @@
         "CityName": "Basel",
         "StreetName": "Freie Strasse",
         "HouseNumber": "75",
-        "Open": true,
+        "Open": false,
         "OpeningTime": "08:30",
         "ClosingTime": "18:00"
     },
@@ -100,7 +100,7 @@
         "CityName": "Basel",
         "StreetName": "Freie Strasse",
         "HouseNumber": "75",
-        "Open": true,
+        "Open": false,
         "OpeningTime": "08:30",
         "ClosingTime": "18:00"
     },
@@ -115,7 +115,7 @@
         "CityName": "Basel",
         "StreetName": "Freie Strasse",
         "HouseNumber": "75",
-        "Open": true,
+        "Open": false,
         "OpeningTime": "08:30",
         "ClosingTime": "18:00"
     },
@@ -130,7 +130,7 @@
         "CityName": "Basel",
         "StreetName": "Streitgasse",
         "HouseNumber": "20",
-        "Open": true,
+        "Open": false,
         "OpeningTime": "06:30",
         "ClosingTime": "22:00"
     },
@@ -145,7 +145,7 @@
         "CityName": "Basel",
         "StreetName": "Greifengasse",
         "HouseNumber": "3",
-        "Open": true,
+        "Open": false,
         "OpeningTime": "07:30",
         "ClosingTime": "18:00"
     }
