@@ -17,19 +17,19 @@ def locations():
 @app.route('/calculations', methods=['GET'])
 def calculations():
     location = request.args.get('location')
-    filter_value = request.args.get('filter')
     originCoordinates, coopLocations = getCoopLocations(location, time_filter=False)
-    # calculationDatas = getAllRoutes("driving-car", coopLocations, originCoordinates)
-    body = {"coordinates": [[originCoordinates.get("Longitude"),originCoordinates.get("Latitude")]]}
-    return jsonify({**body, **coopLocations})
+    body = {"coordinates": [originCoordinates.get("Longitude"),originCoordinates.get("Latitude")]}
+    coopList = []
+    for coop in coopLocations:
+        coopList.append({**body, **coop})
+    return jsonify(coopList)
 
 @app.route('/routeing', methods=['GET'])
 def routeing():
     routingProfile = request.args.get('routingprofile')
     location = request.args.get('location')
-    filter_value = request.args.get('filter')
     originCoordinates, coopLocations = getCoopLocations(location, time_filter=False)
-    calculationDatas = getAllRoutes("driving-car", coopLocations, originCoordinates)
+    calculationDatas = getAllRoutes(routingProfile, coopLocations, originCoordinates)
     return jsonify(calculationDatas)
 
 if __name__ == '__main__':
