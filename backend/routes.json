@@ -6,237 +6,6 @@
                 47.4839723
             ],
             [
-                7.736386,
-                47.483442
-            ]
-        ],
-        "Name": "Coop Supermarkt Liestal B\u00fccheli Center",
-        "Distance": 134,
-        "FormatId": "retail",
-        "Latitude": 47.483442,
-        "Longitude": 7.736386,
-        "LogoUrl": "https://libs.coop.ch/logos-vst/coop-retail-de.svg",
-        "ZipCode": "4410",
-        "CityName": "Liestal",
-        "StreetName": "B\u00fcchelistrasse",
-        "HouseNumber": "10",
-        "Open": false,
-        "OpeningTime": null,
-        "ClosingTime": null,
-        "type": "FeatureCollection",
-        "metadata": {
-            "attribution": "openrouteservice.org | OpenStreetMap contributors",
-            "service": "routing",
-            "timestamp": 1698563277436,
-            "query": {
-                "coordinates": [
-                    [
-                        7.7347783,
-                        47.4839723
-                    ],
-                    [
-                        7.736386,
-                        47.483442
-                    ]
-                ],
-                "profile": "driving-car",
-                "format": "geojson"
-            },
-            "engine": {
-                "version": "7.1.0",
-                "build_date": "2023-07-09T01:31:50Z",
-                "graph_date": "2023-10-22T10:16:37Z"
-            }
-        },
-        "features": [
-            {
-                "bbox": [
-                    7.733447,
-                    47.48281,
-                    7.736185,
-                    47.484691
-                ],
-                "type": "Feature",
-                "properties": {
-                    "transfers": 0,
-                    "fare": 0,
-                    "segments": [
-                        {
-                            "distance": 503.9,
-                            "duration": 162.5,
-                            "steps": [
-                                {
-                                    "distance": 96.9,
-                                    "duration": 34.9,
-                                    "type": 11,
-                                    "instruction": "Head north on Fischmarkt",
-                                    "name": "Fischmarkt",
-                                    "way_points": [
-                                        0,
-                                        6
-                                    ]
-                                },
-                                {
-                                    "distance": 24.2,
-                                    "duration": 8.7,
-                                    "type": 0,
-                                    "instruction": "Turn left onto Freihofgasse",
-                                    "name": "Freihofgasse",
-                                    "way_points": [
-                                        6,
-                                        7
-                                    ]
-                                },
-                                {
-                                    "distance": 225.2,
-                                    "duration": 81.1,
-                                    "type": 0,
-                                    "instruction": "Turn left onto Seestrasse",
-                                    "name": "Seestrasse",
-                                    "way_points": [
-                                        7,
-                                        15
-                                    ]
-                                },
-                                {
-                                    "distance": 157.7,
-                                    "duration": 37.8,
-                                    "type": 0,
-                                    "instruction": "Turn left onto Wasserturmplatz",
-                                    "name": "Wasserturmplatz",
-                                    "way_points": [
-                                        15,
-                                        20
-                                    ]
-                                },
-                                {
-                                    "distance": 0.0,
-                                    "duration": 0.0,
-                                    "type": 10,
-                                    "instruction": "Arrive at Wasserturmplatz, on the right",
-                                    "name": "-",
-                                    "way_points": [
-                                        20,
-                                        20
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "way_points": [
-                        0,
-                        20
-                    ],
-                    "summary": {
-                        "distance": 503.9,
-                        "duration": 162.5
-                    }
-                },
-                "geometry": {
-                    "coordinates": [
-                        [
-                            7.734334,
-                            47.483955
-                        ],
-                        [
-                            7.734322,
-                            47.484096
-                        ],
-                        [
-                            7.734286,
-                            47.484177
-                        ],
-                        [
-                            7.734225,
-                            47.484222
-                        ],
-                        [
-                            7.734014,
-                            47.484321
-                        ],
-                        [
-                            7.733843,
-                            47.484504
-                        ],
-                        [
-                            7.733767,
-                            47.484691
-                        ],
-                        [
-                            7.733447,
-                            47.48467
-                        ],
-                        [
-                            7.733469,
-                            47.48458
-                        ],
-                        [
-                            7.733649,
-                            47.484169
-                        ],
-                        [
-                            7.733754,
-                            47.484006
-                        ],
-                        [
-                            7.733813,
-                            47.483885
-                        ],
-                        [
-                            7.734008,
-                            47.483465
-                        ],
-                        [
-                            7.73415,
-                            47.483308
-                        ],
-                        [
-                            7.734517,
-                            47.482917
-                        ],
-                        [
-                            7.734575,
-                            47.48281
-                        ],
-                        [
-                            7.73563,
-                            47.482931
-                        ],
-                        [
-                            7.735852,
-                            47.483006
-                        ],
-                        [
-                            7.735982,
-                            47.483096
-                        ],
-                        [
-                            7.736149,
-                            47.483356
-                        ],
-                        [
-                            7.736185,
-                            47.483471
-                        ]
-                    ],
-                    "type": "LineString"
-                }
-            }
-        ],
-        "bbox": [
-            7.733447,
-            47.48281,
-            7.736185,
-            47.484691
-        ]
-    },
-    {
-        "coordinates": [
-            [
-                7.7347783,
-                47.4839723
-            ],
-            [
                 7.735262,
                 47.483985
             ]
@@ -526,6 +295,237 @@
             47.483955,
             7.736176,
             47.485931
+        ]
+    },
+    {
+        "coordinates": [
+            [
+                7.7347783,
+                47.4839723
+            ],
+            [
+                7.736386,
+                47.483442
+            ]
+        ],
+        "Name": "Coop Supermarkt Liestal B\u00fccheli Center",
+        "Distance": 134,
+        "FormatId": "retail",
+        "Latitude": 47.483442,
+        "Longitude": 7.736386,
+        "LogoUrl": "https://libs.coop.ch/logos-vst/coop-retail-de.svg",
+        "ZipCode": "4410",
+        "CityName": "Liestal",
+        "StreetName": "B\u00fcchelistrasse",
+        "HouseNumber": "10",
+        "Open": false,
+        "OpeningTime": null,
+        "ClosingTime": null,
+        "type": "FeatureCollection",
+        "metadata": {
+            "attribution": "openrouteservice.org | OpenStreetMap contributors",
+            "service": "routing",
+            "timestamp": 1698563277436,
+            "query": {
+                "coordinates": [
+                    [
+                        7.7347783,
+                        47.4839723
+                    ],
+                    [
+                        7.736386,
+                        47.483442
+                    ]
+                ],
+                "profile": "driving-car",
+                "format": "geojson"
+            },
+            "engine": {
+                "version": "7.1.0",
+                "build_date": "2023-07-09T01:31:50Z",
+                "graph_date": "2023-10-22T10:16:37Z"
+            }
+        },
+        "features": [
+            {
+                "bbox": [
+                    7.733447,
+                    47.48281,
+                    7.736185,
+                    47.484691
+                ],
+                "type": "Feature",
+                "properties": {
+                    "transfers": 0,
+                    "fare": 0,
+                    "segments": [
+                        {
+                            "distance": 503.9,
+                            "duration": 162.5,
+                            "steps": [
+                                {
+                                    "distance": 96.9,
+                                    "duration": 34.9,
+                                    "type": 11,
+                                    "instruction": "Head north on Fischmarkt",
+                                    "name": "Fischmarkt",
+                                    "way_points": [
+                                        0,
+                                        6
+                                    ]
+                                },
+                                {
+                                    "distance": 24.2,
+                                    "duration": 8.7,
+                                    "type": 0,
+                                    "instruction": "Turn left onto Freihofgasse",
+                                    "name": "Freihofgasse",
+                                    "way_points": [
+                                        6,
+                                        7
+                                    ]
+                                },
+                                {
+                                    "distance": 225.2,
+                                    "duration": 81.1,
+                                    "type": 0,
+                                    "instruction": "Turn left onto Seestrasse",
+                                    "name": "Seestrasse",
+                                    "way_points": [
+                                        7,
+                                        15
+                                    ]
+                                },
+                                {
+                                    "distance": 157.7,
+                                    "duration": 37.8,
+                                    "type": 0,
+                                    "instruction": "Turn left onto Wasserturmplatz",
+                                    "name": "Wasserturmplatz",
+                                    "way_points": [
+                                        15,
+                                        20
+                                    ]
+                                },
+                                {
+                                    "distance": 0.0,
+                                    "duration": 0.0,
+                                    "type": 10,
+                                    "instruction": "Arrive at Wasserturmplatz, on the right",
+                                    "name": "-",
+                                    "way_points": [
+                                        20,
+                                        20
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "way_points": [
+                        0,
+                        20
+                    ],
+                    "summary": {
+                        "distance": 503.9,
+                        "duration": 162.5
+                    }
+                },
+                "geometry": {
+                    "coordinates": [
+                        [
+                            7.734334,
+                            47.483955
+                        ],
+                        [
+                            7.734322,
+                            47.484096
+                        ],
+                        [
+                            7.734286,
+                            47.484177
+                        ],
+                        [
+                            7.734225,
+                            47.484222
+                        ],
+                        [
+                            7.734014,
+                            47.484321
+                        ],
+                        [
+                            7.733843,
+                            47.484504
+                        ],
+                        [
+                            7.733767,
+                            47.484691
+                        ],
+                        [
+                            7.733447,
+                            47.48467
+                        ],
+                        [
+                            7.733469,
+                            47.48458
+                        ],
+                        [
+                            7.733649,
+                            47.484169
+                        ],
+                        [
+                            7.733754,
+                            47.484006
+                        ],
+                        [
+                            7.733813,
+                            47.483885
+                        ],
+                        [
+                            7.734008,
+                            47.483465
+                        ],
+                        [
+                            7.73415,
+                            47.483308
+                        ],
+                        [
+                            7.734517,
+                            47.482917
+                        ],
+                        [
+                            7.734575,
+                            47.48281
+                        ],
+                        [
+                            7.73563,
+                            47.482931
+                        ],
+                        [
+                            7.735852,
+                            47.483006
+                        ],
+                        [
+                            7.735982,
+                            47.483096
+                        ],
+                        [
+                            7.736149,
+                            47.483356
+                        ],
+                        [
+                            7.736185,
+                            47.483471
+                        ]
+                    ],
+                    "type": "LineString"
+                }
+            }
+        ],
+        "bbox": [
+            7.733447,
+            47.48281,
+            7.736185,
+            47.484691
         ]
     },
     {
@@ -974,6 +974,622 @@
             7.733447,
             47.472871,
             7.755624,
+            47.484691
+        ]
+    },
+    {
+        "coordinates": [
+            [
+                7.7347783,
+                47.4839723
+            ],
+            [
+                7.758692,
+                47.472941
+            ]
+        ],
+        "Name": "Coop Supermarkt Lausen",
+        "Distance": 2179,
+        "FormatId": "retail",
+        "Latitude": 47.472941,
+        "Longitude": 7.758692,
+        "LogoUrl": "https://libs.coop.ch/logos-vst/coop-retail-de.svg",
+        "ZipCode": "4415",
+        "CityName": "Lausen",
+        "StreetName": "Br\u00fchlstrasse",
+        "HouseNumber": "52",
+        "Open": false,
+        "OpeningTime": null,
+        "ClosingTime": null,
+        "type": "FeatureCollection",
+        "metadata": {
+            "attribution": "openrouteservice.org | OpenStreetMap contributors",
+            "service": "routing",
+            "timestamp": 1698563277807,
+            "query": {
+                "coordinates": [
+                    [
+                        7.7347783,
+                        47.4839723
+                    ],
+                    [
+                        7.758692,
+                        47.472941
+                    ]
+                ],
+                "profile": "driving-car",
+                "format": "geojson"
+            },
+            "engine": {
+                "version": "7.1.0",
+                "build_date": "2023-07-09T01:31:50Z",
+                "graph_date": "2023-10-22T10:16:37Z"
+            }
+        },
+        "features": [
+            {
+                "bbox": [
+                    7.733447,
+                    47.47135,
+                    7.759848,
+                    47.484691
+                ],
+                "type": "Feature",
+                "properties": {
+                    "transfers": 0,
+                    "fare": 0,
+                    "segments": [
+                        {
+                            "distance": 2961.0,
+                            "duration": 448.6,
+                            "steps": [
+                                {
+                                    "distance": 96.9,
+                                    "duration": 34.9,
+                                    "type": 11,
+                                    "instruction": "Head north on Fischmarkt",
+                                    "name": "Fischmarkt",
+                                    "way_points": [
+                                        0,
+                                        6
+                                    ]
+                                },
+                                {
+                                    "distance": 24.2,
+                                    "duration": 8.7,
+                                    "type": 0,
+                                    "instruction": "Turn left onto Freihofgasse",
+                                    "name": "Freihofgasse",
+                                    "way_points": [
+                                        6,
+                                        7
+                                    ]
+                                },
+                                {
+                                    "distance": 225.2,
+                                    "duration": 81.1,
+                                    "type": 0,
+                                    "instruction": "Turn left onto Seestrasse",
+                                    "name": "Seestrasse",
+                                    "way_points": [
+                                        7,
+                                        15
+                                    ]
+                                },
+                                {
+                                    "distance": 80.5,
+                                    "duration": 19.3,
+                                    "type": 0,
+                                    "instruction": "Turn left onto Wasserturmplatz",
+                                    "name": "Wasserturmplatz",
+                                    "way_points": [
+                                        15,
+                                        16
+                                    ]
+                                },
+                                {
+                                    "distance": 491.8,
+                                    "duration": 55.2,
+                                    "type": 1,
+                                    "instruction": "Turn right onto Kasernenstrasse",
+                                    "name": "Kasernenstrasse",
+                                    "way_points": [
+                                        16,
+                                        28
+                                    ]
+                                },
+                                {
+                                    "distance": 1795.7,
+                                    "duration": 190.2,
+                                    "type": 1,
+                                    "instruction": "Turn right onto Kasernenstrasse",
+                                    "name": "Kasernenstrasse",
+                                    "way_points": [
+                                        28,
+                                        82
+                                    ]
+                                },
+                                {
+                                    "distance": 140.0,
+                                    "duration": 33.6,
+                                    "type": 0,
+                                    "instruction": "Turn left onto Wolfgasse",
+                                    "name": "Wolfgasse",
+                                    "way_points": [
+                                        82,
+                                        88
+                                    ]
+                                },
+                                {
+                                    "distance": 56.7,
+                                    "duration": 13.6,
+                                    "type": 0,
+                                    "instruction": "Turn left onto Unterdorfstrasse",
+                                    "name": "Unterdorfstrasse",
+                                    "way_points": [
+                                        88,
+                                        91
+                                    ]
+                                },
+                                {
+                                    "distance": 50.1,
+                                    "duration": 12.0,
+                                    "type": 0,
+                                    "instruction": "Turn left onto Br\u00fchlstrasse",
+                                    "name": "Br\u00fchlstrasse",
+                                    "way_points": [
+                                        91,
+                                        94
+                                    ]
+                                },
+                                {
+                                    "distance": 0.0,
+                                    "duration": 0.0,
+                                    "type": 10,
+                                    "instruction": "Arrive at Br\u00fchlstrasse, on the left",
+                                    "name": "-",
+                                    "way_points": [
+                                        94,
+                                        94
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "extras": {
+                        "roadaccessrestrictions": {
+                            "values": [
+                                [
+                                    0,
+                                    93,
+                                    0
+                                ],
+                                [
+                                    93,
+                                    94,
+                                    4
+                                ]
+                            ],
+                            "summary": [
+                                {
+                                    "value": 0.0,
+                                    "distance": 2929.3,
+                                    "amount": 98.93
+                                },
+                                {
+                                    "value": 4.0,
+                                    "distance": 31.7,
+                                    "amount": 1.07
+                                }
+                            ]
+                        }
+                    },
+                    "warnings": [
+                        {
+                            "code": 1,
+                            "message": "There may be restrictions on some roads"
+                        }
+                    ],
+                    "way_points": [
+                        0,
+                        94
+                    ],
+                    "summary": {
+                        "distance": 2961.0,
+                        "duration": 448.6
+                    }
+                },
+                "geometry": {
+                    "coordinates": [
+                        [
+                            7.734334,
+                            47.483955
+                        ],
+                        [
+                            7.734322,
+                            47.484096
+                        ],
+                        [
+                            7.734286,
+                            47.484177
+                        ],
+                        [
+                            7.734225,
+                            47.484222
+                        ],
+                        [
+                            7.734014,
+                            47.484321
+                        ],
+                        [
+                            7.733843,
+                            47.484504
+                        ],
+                        [
+                            7.733767,
+                            47.484691
+                        ],
+                        [
+                            7.733447,
+                            47.48467
+                        ],
+                        [
+                            7.733469,
+                            47.48458
+                        ],
+                        [
+                            7.733649,
+                            47.484169
+                        ],
+                        [
+                            7.733754,
+                            47.484006
+                        ],
+                        [
+                            7.733813,
+                            47.483885
+                        ],
+                        [
+                            7.734008,
+                            47.483465
+                        ],
+                        [
+                            7.73415,
+                            47.483308
+                        ],
+                        [
+                            7.734517,
+                            47.482917
+                        ],
+                        [
+                            7.734575,
+                            47.48281
+                        ],
+                        [
+                            7.73563,
+                            47.482931
+                        ],
+                        [
+                            7.735713,
+                            47.482798
+                        ],
+                        [
+                            7.735794,
+                            47.48276
+                        ],
+                        [
+                            7.736597,
+                            47.482656
+                        ],
+                        [
+                            7.737017,
+                            47.482585
+                        ],
+                        [
+                            7.737397,
+                            47.482503
+                        ],
+                        [
+                            7.737574,
+                            47.482451
+                        ],
+                        [
+                            7.738101,
+                            47.482265
+                        ],
+                        [
+                            7.738311,
+                            47.482167
+                        ],
+                        [
+                            7.738747,
+                            47.481926
+                        ],
+                        [
+                            7.740543,
+                            47.480864
+                        ],
+                        [
+                            7.740856,
+                            47.480619
+                        ],
+                        [
+                            7.740959,
+                            47.480592
+                        ],
+                        [
+                            7.740985,
+                            47.480477
+                        ],
+                        [
+                            7.741241,
+                            47.480104
+                        ],
+                        [
+                            7.74144,
+                            47.479843
+                        ],
+                        [
+                            7.741696,
+                            47.479629
+                        ],
+                        [
+                            7.742414,
+                            47.479105
+                        ],
+                        [
+                            7.742778,
+                            47.478848
+                        ],
+                        [
+                            7.743394,
+                            47.478402
+                        ],
+                        [
+                            7.743706,
+                            47.478238
+                        ],
+                        [
+                            7.744093,
+                            47.478089
+                        ],
+                        [
+                            7.744818,
+                            47.477937
+                        ],
+                        [
+                            7.744927,
+                            47.477881
+                        ],
+                        [
+                            7.745081,
+                            47.477848
+                        ],
+                        [
+                            7.745169,
+                            47.477828
+                        ],
+                        [
+                            7.745545,
+                            47.477753
+                        ],
+                        [
+                            7.745605,
+                            47.477735
+                        ],
+                        [
+                            7.74576,
+                            47.477699
+                        ],
+                        [
+                            7.74622,
+                            47.477622
+                        ],
+                        [
+                            7.746374,
+                            47.477603
+                        ],
+                        [
+                            7.746513,
+                            47.477607
+                        ],
+                        [
+                            7.747133,
+                            47.477485
+                        ],
+                        [
+                            7.747755,
+                            47.477359
+                        ],
+                        [
+                            7.748216,
+                            47.477259
+                        ],
+                        [
+                            7.748413,
+                            47.477197
+                        ],
+                        [
+                            7.749626,
+                            47.476699
+                        ],
+                        [
+                            7.750108,
+                            47.476477
+                        ],
+                        [
+                            7.750465,
+                            47.476287
+                        ],
+                        [
+                            7.750723,
+                            47.476116
+                        ],
+                        [
+                            7.750784,
+                            47.476077
+                        ],
+                        [
+                            7.750989,
+                            47.475914
+                        ],
+                        [
+                            7.751382,
+                            47.475598
+                        ],
+                        [
+                            7.751674,
+                            47.475426
+                        ],
+                        [
+                            7.752117,
+                            47.475199
+                        ],
+                        [
+                            7.752374,
+                            47.475038
+                        ],
+                        [
+                            7.752563,
+                            47.47486
+                        ],
+                        [
+                            7.752634,
+                            47.474768
+                        ],
+                        [
+                            7.75297,
+                            47.474213
+                        ],
+                        [
+                            7.753095,
+                            47.474079
+                        ],
+                        [
+                            7.753226,
+                            47.473972
+                        ],
+                        [
+                            7.753486,
+                            47.473818
+                        ],
+                        [
+                            7.754905,
+                            47.473178
+                        ],
+                        [
+                            7.755868,
+                            47.472767
+                        ],
+                        [
+                            7.756048,
+                            47.472705
+                        ],
+                        [
+                            7.756158,
+                            47.472671
+                        ],
+                        [
+                            7.756521,
+                            47.472583
+                        ],
+                        [
+                            7.756668,
+                            47.472557
+                        ],
+                        [
+                            7.757684,
+                            47.472362
+                        ],
+                        [
+                            7.757817,
+                            47.472319
+                        ],
+                        [
+                            7.757978,
+                            47.472239
+                        ],
+                        [
+                            7.758094,
+                            47.472159
+                        ],
+                        [
+                            7.758206,
+                            47.472073
+                        ],
+                        [
+                            7.758458,
+                            47.471824
+                        ],
+                        [
+                            7.758571,
+                            47.471717
+                        ],
+                        [
+                            7.758765,
+                            47.471604
+                        ],
+                        [
+                            7.759462,
+                            47.47135
+                        ],
+                        [
+                            7.759511,
+                            47.471447
+                        ],
+                        [
+                            7.759559,
+                            47.471636
+                        ],
+                        [
+                            7.759589,
+                            47.471986
+                        ],
+                        [
+                            7.759637,
+                            47.472225
+                        ],
+                        [
+                            7.759703,
+                            47.472363
+                        ],
+                        [
+                            7.759848,
+                            47.472569
+                        ],
+                        [
+                            7.7598,
+                            47.472654
+                        ],
+                        [
+                            7.759441,
+                            47.472872
+                        ],
+                        [
+                            7.759389,
+                            47.472959
+                        ],
+                        [
+                            7.759315,
+                            47.47297
+                        ],
+                        [
+                            7.759148,
+                            47.472985
+                        ],
+                        [
+                            7.758741,
+                            47.473061
+                        ]
+                    ],
+                    "type": "LineString"
+                }
+            }
+        ],
+        "bbox": [
+            7.733447,
+            47.47135,
+            7.759848,
             47.484691
         ]
     },
@@ -2246,1270 +2862,6 @@
                 47.4839723
             ],
             [
-                7.758692,
-                47.472941
-            ]
-        ],
-        "Name": "Coop Supermarkt Lausen",
-        "Distance": 2179,
-        "FormatId": "retail",
-        "Latitude": 47.472941,
-        "Longitude": 7.758692,
-        "LogoUrl": "https://libs.coop.ch/logos-vst/coop-retail-de.svg",
-        "ZipCode": "4415",
-        "CityName": "Lausen",
-        "StreetName": "Br\u00fchlstrasse",
-        "HouseNumber": "52",
-        "Open": false,
-        "OpeningTime": null,
-        "ClosingTime": null,
-        "type": "FeatureCollection",
-        "metadata": {
-            "attribution": "openrouteservice.org | OpenStreetMap contributors",
-            "service": "routing",
-            "timestamp": 1698563277807,
-            "query": {
-                "coordinates": [
-                    [
-                        7.7347783,
-                        47.4839723
-                    ],
-                    [
-                        7.758692,
-                        47.472941
-                    ]
-                ],
-                "profile": "driving-car",
-                "format": "geojson"
-            },
-            "engine": {
-                "version": "7.1.0",
-                "build_date": "2023-07-09T01:31:50Z",
-                "graph_date": "2023-10-22T10:16:37Z"
-            }
-        },
-        "features": [
-            {
-                "bbox": [
-                    7.733447,
-                    47.47135,
-                    7.759848,
-                    47.484691
-                ],
-                "type": "Feature",
-                "properties": {
-                    "transfers": 0,
-                    "fare": 0,
-                    "segments": [
-                        {
-                            "distance": 2961.0,
-                            "duration": 448.6,
-                            "steps": [
-                                {
-                                    "distance": 96.9,
-                                    "duration": 34.9,
-                                    "type": 11,
-                                    "instruction": "Head north on Fischmarkt",
-                                    "name": "Fischmarkt",
-                                    "way_points": [
-                                        0,
-                                        6
-                                    ]
-                                },
-                                {
-                                    "distance": 24.2,
-                                    "duration": 8.7,
-                                    "type": 0,
-                                    "instruction": "Turn left onto Freihofgasse",
-                                    "name": "Freihofgasse",
-                                    "way_points": [
-                                        6,
-                                        7
-                                    ]
-                                },
-                                {
-                                    "distance": 225.2,
-                                    "duration": 81.1,
-                                    "type": 0,
-                                    "instruction": "Turn left onto Seestrasse",
-                                    "name": "Seestrasse",
-                                    "way_points": [
-                                        7,
-                                        15
-                                    ]
-                                },
-                                {
-                                    "distance": 80.5,
-                                    "duration": 19.3,
-                                    "type": 0,
-                                    "instruction": "Turn left onto Wasserturmplatz",
-                                    "name": "Wasserturmplatz",
-                                    "way_points": [
-                                        15,
-                                        16
-                                    ]
-                                },
-                                {
-                                    "distance": 491.8,
-                                    "duration": 55.2,
-                                    "type": 1,
-                                    "instruction": "Turn right onto Kasernenstrasse",
-                                    "name": "Kasernenstrasse",
-                                    "way_points": [
-                                        16,
-                                        28
-                                    ]
-                                },
-                                {
-                                    "distance": 1795.7,
-                                    "duration": 190.2,
-                                    "type": 1,
-                                    "instruction": "Turn right onto Kasernenstrasse",
-                                    "name": "Kasernenstrasse",
-                                    "way_points": [
-                                        28,
-                                        82
-                                    ]
-                                },
-                                {
-                                    "distance": 140.0,
-                                    "duration": 33.6,
-                                    "type": 0,
-                                    "instruction": "Turn left onto Wolfgasse",
-                                    "name": "Wolfgasse",
-                                    "way_points": [
-                                        82,
-                                        88
-                                    ]
-                                },
-                                {
-                                    "distance": 56.7,
-                                    "duration": 13.6,
-                                    "type": 0,
-                                    "instruction": "Turn left onto Unterdorfstrasse",
-                                    "name": "Unterdorfstrasse",
-                                    "way_points": [
-                                        88,
-                                        91
-                                    ]
-                                },
-                                {
-                                    "distance": 50.1,
-                                    "duration": 12.0,
-                                    "type": 0,
-                                    "instruction": "Turn left onto Br\u00fchlstrasse",
-                                    "name": "Br\u00fchlstrasse",
-                                    "way_points": [
-                                        91,
-                                        94
-                                    ]
-                                },
-                                {
-                                    "distance": 0.0,
-                                    "duration": 0.0,
-                                    "type": 10,
-                                    "instruction": "Arrive at Br\u00fchlstrasse, on the left",
-                                    "name": "-",
-                                    "way_points": [
-                                        94,
-                                        94
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "extras": {
-                        "roadaccessrestrictions": {
-                            "values": [
-                                [
-                                    0,
-                                    93,
-                                    0
-                                ],
-                                [
-                                    93,
-                                    94,
-                                    4
-                                ]
-                            ],
-                            "summary": [
-                                {
-                                    "value": 0.0,
-                                    "distance": 2929.3,
-                                    "amount": 98.93
-                                },
-                                {
-                                    "value": 4.0,
-                                    "distance": 31.7,
-                                    "amount": 1.07
-                                }
-                            ]
-                        }
-                    },
-                    "warnings": [
-                        {
-                            "code": 1,
-                            "message": "There may be restrictions on some roads"
-                        }
-                    ],
-                    "way_points": [
-                        0,
-                        94
-                    ],
-                    "summary": {
-                        "distance": 2961.0,
-                        "duration": 448.6
-                    }
-                },
-                "geometry": {
-                    "coordinates": [
-                        [
-                            7.734334,
-                            47.483955
-                        ],
-                        [
-                            7.734322,
-                            47.484096
-                        ],
-                        [
-                            7.734286,
-                            47.484177
-                        ],
-                        [
-                            7.734225,
-                            47.484222
-                        ],
-                        [
-                            7.734014,
-                            47.484321
-                        ],
-                        [
-                            7.733843,
-                            47.484504
-                        ],
-                        [
-                            7.733767,
-                            47.484691
-                        ],
-                        [
-                            7.733447,
-                            47.48467
-                        ],
-                        [
-                            7.733469,
-                            47.48458
-                        ],
-                        [
-                            7.733649,
-                            47.484169
-                        ],
-                        [
-                            7.733754,
-                            47.484006
-                        ],
-                        [
-                            7.733813,
-                            47.483885
-                        ],
-                        [
-                            7.734008,
-                            47.483465
-                        ],
-                        [
-                            7.73415,
-                            47.483308
-                        ],
-                        [
-                            7.734517,
-                            47.482917
-                        ],
-                        [
-                            7.734575,
-                            47.48281
-                        ],
-                        [
-                            7.73563,
-                            47.482931
-                        ],
-                        [
-                            7.735713,
-                            47.482798
-                        ],
-                        [
-                            7.735794,
-                            47.48276
-                        ],
-                        [
-                            7.736597,
-                            47.482656
-                        ],
-                        [
-                            7.737017,
-                            47.482585
-                        ],
-                        [
-                            7.737397,
-                            47.482503
-                        ],
-                        [
-                            7.737574,
-                            47.482451
-                        ],
-                        [
-                            7.738101,
-                            47.482265
-                        ],
-                        [
-                            7.738311,
-                            47.482167
-                        ],
-                        [
-                            7.738747,
-                            47.481926
-                        ],
-                        [
-                            7.740543,
-                            47.480864
-                        ],
-                        [
-                            7.740856,
-                            47.480619
-                        ],
-                        [
-                            7.740959,
-                            47.480592
-                        ],
-                        [
-                            7.740985,
-                            47.480477
-                        ],
-                        [
-                            7.741241,
-                            47.480104
-                        ],
-                        [
-                            7.74144,
-                            47.479843
-                        ],
-                        [
-                            7.741696,
-                            47.479629
-                        ],
-                        [
-                            7.742414,
-                            47.479105
-                        ],
-                        [
-                            7.742778,
-                            47.478848
-                        ],
-                        [
-                            7.743394,
-                            47.478402
-                        ],
-                        [
-                            7.743706,
-                            47.478238
-                        ],
-                        [
-                            7.744093,
-                            47.478089
-                        ],
-                        [
-                            7.744818,
-                            47.477937
-                        ],
-                        [
-                            7.744927,
-                            47.477881
-                        ],
-                        [
-                            7.745081,
-                            47.477848
-                        ],
-                        [
-                            7.745169,
-                            47.477828
-                        ],
-                        [
-                            7.745545,
-                            47.477753
-                        ],
-                        [
-                            7.745605,
-                            47.477735
-                        ],
-                        [
-                            7.74576,
-                            47.477699
-                        ],
-                        [
-                            7.74622,
-                            47.477622
-                        ],
-                        [
-                            7.746374,
-                            47.477603
-                        ],
-                        [
-                            7.746513,
-                            47.477607
-                        ],
-                        [
-                            7.747133,
-                            47.477485
-                        ],
-                        [
-                            7.747755,
-                            47.477359
-                        ],
-                        [
-                            7.748216,
-                            47.477259
-                        ],
-                        [
-                            7.748413,
-                            47.477197
-                        ],
-                        [
-                            7.749626,
-                            47.476699
-                        ],
-                        [
-                            7.750108,
-                            47.476477
-                        ],
-                        [
-                            7.750465,
-                            47.476287
-                        ],
-                        [
-                            7.750723,
-                            47.476116
-                        ],
-                        [
-                            7.750784,
-                            47.476077
-                        ],
-                        [
-                            7.750989,
-                            47.475914
-                        ],
-                        [
-                            7.751382,
-                            47.475598
-                        ],
-                        [
-                            7.751674,
-                            47.475426
-                        ],
-                        [
-                            7.752117,
-                            47.475199
-                        ],
-                        [
-                            7.752374,
-                            47.475038
-                        ],
-                        [
-                            7.752563,
-                            47.47486
-                        ],
-                        [
-                            7.752634,
-                            47.474768
-                        ],
-                        [
-                            7.75297,
-                            47.474213
-                        ],
-                        [
-                            7.753095,
-                            47.474079
-                        ],
-                        [
-                            7.753226,
-                            47.473972
-                        ],
-                        [
-                            7.753486,
-                            47.473818
-                        ],
-                        [
-                            7.754905,
-                            47.473178
-                        ],
-                        [
-                            7.755868,
-                            47.472767
-                        ],
-                        [
-                            7.756048,
-                            47.472705
-                        ],
-                        [
-                            7.756158,
-                            47.472671
-                        ],
-                        [
-                            7.756521,
-                            47.472583
-                        ],
-                        [
-                            7.756668,
-                            47.472557
-                        ],
-                        [
-                            7.757684,
-                            47.472362
-                        ],
-                        [
-                            7.757817,
-                            47.472319
-                        ],
-                        [
-                            7.757978,
-                            47.472239
-                        ],
-                        [
-                            7.758094,
-                            47.472159
-                        ],
-                        [
-                            7.758206,
-                            47.472073
-                        ],
-                        [
-                            7.758458,
-                            47.471824
-                        ],
-                        [
-                            7.758571,
-                            47.471717
-                        ],
-                        [
-                            7.758765,
-                            47.471604
-                        ],
-                        [
-                            7.759462,
-                            47.47135
-                        ],
-                        [
-                            7.759511,
-                            47.471447
-                        ],
-                        [
-                            7.759559,
-                            47.471636
-                        ],
-                        [
-                            7.759589,
-                            47.471986
-                        ],
-                        [
-                            7.759637,
-                            47.472225
-                        ],
-                        [
-                            7.759703,
-                            47.472363
-                        ],
-                        [
-                            7.759848,
-                            47.472569
-                        ],
-                        [
-                            7.7598,
-                            47.472654
-                        ],
-                        [
-                            7.759441,
-                            47.472872
-                        ],
-                        [
-                            7.759389,
-                            47.472959
-                        ],
-                        [
-                            7.759315,
-                            47.47297
-                        ],
-                        [
-                            7.759148,
-                            47.472985
-                        ],
-                        [
-                            7.758741,
-                            47.473061
-                        ]
-                    ],
-                    "type": "LineString"
-                }
-            }
-        ],
-        "bbox": [
-            7.733447,
-            47.47135,
-            7.759848,
-            47.484691
-        ]
-    },
-    {
-        "coordinates": [
-            [
-                7.7347783,
-                47.4839723
-            ],
-            [
-                7.718853,
-                47.512438
-            ]
-        ],
-        "Name": "Coop Pronto Shop mit Tankstelle Frenkendorf",
-        "Distance": 3385,
-        "FormatId": "pronto",
-        "Latitude": 47.512438,
-        "Longitude": 7.718853,
-        "LogoUrl": "https://libs.coop.ch/logos-vst/coop-pronto-de.svg",
-        "ZipCode": "4402",
-        "CityName": "Frenkendorf",
-        "StreetName": "Rheinstrasse",
-        "HouseNumber": "113D",
-        "Open": true,
-        "OpeningTime": "06:00",
-        "ClosingTime": "23:00",
-        "type": "FeatureCollection",
-        "metadata": {
-            "attribution": "openrouteservice.org | OpenStreetMap contributors",
-            "service": "routing",
-            "timestamp": 1698563278418,
-            "query": {
-                "coordinates": [
-                    [
-                        7.7347783,
-                        47.4839723
-                    ],
-                    [
-                        7.718853,
-                        47.512438
-                    ]
-                ],
-                "profile": "driving-car",
-                "format": "geojson"
-            },
-            "engine": {
-                "version": "7.1.0",
-                "build_date": "2023-07-09T01:31:50Z",
-                "graph_date": "2023-10-22T10:16:37Z"
-            }
-        },
-        "features": [
-            {
-                "bbox": [
-                    7.718912,
-                    47.483955,
-                    7.734334,
-                    47.512614
-                ],
-                "type": "Feature",
-                "properties": {
-                    "transfers": 0,
-                    "fare": 0,
-                    "segments": [
-                        {
-                            "distance": 4049.3,
-                            "duration": 482.0,
-                            "steps": [
-                                {
-                                    "distance": 96.9,
-                                    "duration": 34.9,
-                                    "type": 11,
-                                    "instruction": "Head north on Fischmarkt",
-                                    "name": "Fischmarkt",
-                                    "way_points": [
-                                        0,
-                                        6
-                                    ]
-                                },
-                                {
-                                    "distance": 24.2,
-                                    "duration": 8.7,
-                                    "type": 0,
-                                    "instruction": "Turn left onto Freihofgasse",
-                                    "name": "Freihofgasse",
-                                    "way_points": [
-                                        6,
-                                        7
-                                    ]
-                                },
-                                {
-                                    "distance": 92.9,
-                                    "duration": 33.4,
-                                    "type": 1,
-                                    "instruction": "Turn right onto Sch\u00fctzenstrasse",
-                                    "name": "Sch\u00fctzenstrasse",
-                                    "way_points": [
-                                        7,
-                                        11
-                                    ]
-                                },
-                                {
-                                    "distance": 15.6,
-                                    "duration": 5.6,
-                                    "type": 0,
-                                    "instruction": "Turn left onto Rheinstrasse",
-                                    "name": "Rheinstrasse",
-                                    "way_points": [
-                                        11,
-                                        12
-                                    ]
-                                },
-                                {
-                                    "distance": 66.4,
-                                    "duration": 19.3,
-                                    "type": 1,
-                                    "instruction": "Turn right onto 2, 12",
-                                    "name": "2, 12",
-                                    "way_points": [
-                                        12,
-                                        15
-                                    ]
-                                },
-                                {
-                                    "distance": 19.4,
-                                    "duration": 7.0,
-                                    "type": 12,
-                                    "instruction": "Keep left onto 2, 12",
-                                    "name": "2, 12",
-                                    "way_points": [
-                                        15,
-                                        17
-                                    ]
-                                },
-                                {
-                                    "distance": 55.3,
-                                    "duration": 10.0,
-                                    "type": 0,
-                                    "instruction": "Turn left onto Weierweg, 2, 12",
-                                    "name": "Weierweg, 2, 12",
-                                    "way_points": [
-                                        17,
-                                        19
-                                    ]
-                                },
-                                {
-                                    "distance": 81.1,
-                                    "duration": 9.7,
-                                    "type": 4,
-                                    "instruction": "Turn slight left onto Gasstrasse, 2, 12",
-                                    "name": "Gasstrasse, 2, 12",
-                                    "way_points": [
-                                        19,
-                                        22
-                                    ]
-                                },
-                                {
-                                    "distance": 30.5,
-                                    "duration": 5.5,
-                                    "type": 13,
-                                    "instruction": "Keep right onto 2, 12",
-                                    "name": "2, 12",
-                                    "way_points": [
-                                        22,
-                                        24
-                                    ]
-                                },
-                                {
-                                    "distance": 829.2,
-                                    "duration": 95.1,
-                                    "type": 1,
-                                    "instruction": "Turn right onto Rheinstrasse, 2, 12",
-                                    "name": "Rheinstrasse, 2, 12",
-                                    "way_points": [
-                                        24,
-                                        51
-                                    ]
-                                },
-                                {
-                                    "distance": 111.1,
-                                    "duration": 20.0,
-                                    "type": 1,
-                                    "instruction": "Turn right",
-                                    "name": "-",
-                                    "way_points": [
-                                        51,
-                                        55
-                                    ]
-                                },
-                                {
-                                    "distance": 30.6,
-                                    "duration": 11.0,
-                                    "type": 12,
-                                    "instruction": "Keep left",
-                                    "name": "-",
-                                    "way_points": [
-                                        55,
-                                        58
-                                    ]
-                                },
-                                {
-                                    "distance": 2112.2,
-                                    "duration": 153.4,
-                                    "type": 4,
-                                    "instruction": "Turn slight left",
-                                    "name": "-",
-                                    "way_points": [
-                                        58,
-                                        79
-                                    ]
-                                },
-                                {
-                                    "distance": 180.3,
-                                    "duration": 25.1,
-                                    "type": 13,
-                                    "instruction": "Keep right",
-                                    "name": "-",
-                                    "way_points": [
-                                        79,
-                                        83
-                                    ]
-                                },
-                                {
-                                    "distance": 303.8,
-                                    "duration": 43.4,
-                                    "type": 0,
-                                    "instruction": "Turn left onto W\u00f6lferstrasse",
-                                    "name": "W\u00f6lferstrasse",
-                                    "way_points": [
-                                        83,
-                                        94
-                                    ]
-                                },
-                                {
-                                    "distance": 0.0,
-                                    "duration": 0.0,
-                                    "type": 10,
-                                    "instruction": "Arrive at W\u00f6lferstrasse, on the right",
-                                    "name": "-",
-                                    "way_points": [
-                                        94,
-                                        94
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "way_points": [
-                        0,
-                        94
-                    ],
-                    "summary": {
-                        "distance": 4049.3,
-                        "duration": 482.0
-                    }
-                },
-                "geometry": {
-                    "coordinates": [
-                        [
-                            7.734334,
-                            47.483955
-                        ],
-                        [
-                            7.734322,
-                            47.484096
-                        ],
-                        [
-                            7.734286,
-                            47.484177
-                        ],
-                        [
-                            7.734225,
-                            47.484222
-                        ],
-                        [
-                            7.734014,
-                            47.484321
-                        ],
-                        [
-                            7.733843,
-                            47.484504
-                        ],
-                        [
-                            7.733767,
-                            47.484691
-                        ],
-                        [
-                            7.733447,
-                            47.48467
-                        ],
-                        [
-                            7.73347,
-                            47.48493
-                        ],
-                        [
-                            7.733464,
-                            47.485203
-                        ],
-                        [
-                            7.733482,
-                            47.485292
-                        ],
-                        [
-                            7.733571,
-                            47.485495
-                        ],
-                        [
-                            7.733415,
-                            47.485587
-                        ],
-                        [
-                            7.733494,
-                            47.485644
-                        ],
-                        [
-                            7.733758,
-                            47.485942
-                        ],
-                        [
-                            7.733938,
-                            47.486064
-                        ],
-                        [
-                            7.733986,
-                            47.486139
-                        ],
-                        [
-                            7.734009,
-                            47.48623
-                        ],
-                        [
-                            7.733601,
-                            47.486546
-                        ],
-                        [
-                            7.733495,
-                            47.486576
-                        ],
-                        [
-                            7.733343,
-                            47.486542
-                        ],
-                        [
-                            7.733254,
-                            47.486484
-                        ],
-                        [
-                            7.732778,
-                            47.486053
-                        ],
-                        [
-                            7.732592,
-                            47.485987
-                        ],
-                        [
-                            7.732398,
-                            47.485986
-                        ],
-                        [
-                            7.732018,
-                            47.486274
-                        ],
-                        [
-                            7.731913,
-                            47.486344
-                        ],
-                        [
-                            7.731394,
-                            47.486659
-                        ],
-                        [
-                            7.731274,
-                            47.486731
-                        ],
-                        [
-                            7.731025,
-                            47.486868
-                        ],
-                        [
-                            7.7307,
-                            47.487047
-                        ],
-                        [
-                            7.730427,
-                            47.487205
-                        ],
-                        [
-                            7.72952,
-                            47.487752
-                        ],
-                        [
-                            7.729492,
-                            47.487769
-                        ],
-                        [
-                            7.729302,
-                            47.487887
-                        ],
-                        [
-                            7.729025,
-                            47.488069
-                        ],
-                        [
-                            7.728737,
-                            47.48828
-                        ],
-                        [
-                            7.728183,
-                            47.488681
-                        ],
-                        [
-                            7.727717,
-                            47.489056
-                        ],
-                        [
-                            7.727605,
-                            47.489222
-                        ],
-                        [
-                            7.727477,
-                            47.489593
-                        ],
-                        [
-                            7.727444,
-                            47.489745
-                        ],
-                        [
-                            7.727374,
-                            47.489912
-                        ],
-                        [
-                            7.727179,
-                            47.490181
-                        ],
-                        [
-                            7.726859,
-                            47.490472
-                        ],
-                        [
-                            7.726775,
-                            47.490558
-                        ],
-                        [
-                            7.726684,
-                            47.490622
-                        ],
-                        [
-                            7.72605,
-                            47.490981
-                        ],
-                        [
-                            7.72589,
-                            47.491072
-                        ],
-                        [
-                            7.725718,
-                            47.491202
-                        ],
-                        [
-                            7.725544,
-                            47.491334
-                        ],
-                        [
-                            7.725332,
-                            47.491533
-                        ],
-                        [
-                            7.725364,
-                            47.491625
-                        ],
-                        [
-                            7.725358,
-                            47.491743
-                        ],
-                        [
-                            7.725476,
-                            47.49199
-                        ],
-                        [
-                            7.726096,
-                            47.492311
-                        ],
-                        [
-                            7.726219,
-                            47.492402
-                        ],
-                        [
-                            7.726302,
-                            47.49248
-                        ],
-                        [
-                            7.726329,
-                            47.492532
-                        ],
-                        [
-                            7.726298,
-                            47.492585
-                        ],
-                        [
-                            7.726221,
-                            47.492654
-                        ],
-                        [
-                            7.725731,
-                            47.493003
-                        ],
-                        [
-                            7.725455,
-                            47.493269
-                        ],
-                        [
-                            7.725292,
-                            47.493464
-                        ],
-                        [
-                            7.725215,
-                            47.493582
-                        ],
-                        [
-                            7.725053,
-                            47.493766
-                        ],
-                        [
-                            7.723894,
-                            47.497108
-                        ],
-                        [
-                            7.723296,
-                            47.498964
-                        ],
-                        [
-                            7.722869,
-                            47.500359
-                        ],
-                        [
-                            7.72252,
-                            47.501687
-                        ],
-                        [
-                            7.722261,
-                            47.50313
-                        ],
-                        [
-                            7.72227,
-                            47.503674
-                        ],
-                        [
-                            7.722337,
-                            47.504178
-                        ],
-                        [
-                            7.722641,
-                            47.505186
-                        ],
-                        [
-                            7.722855,
-                            47.506023
-                        ],
-                        [
-                            7.723039,
-                            47.507226
-                        ],
-                        [
-                            7.7232,
-                            47.508473
-                        ],
-                        [
-                            7.723181,
-                            47.509539
-                        ],
-                        [
-                            7.723171,
-                            47.51016
-                        ],
-                        [
-                            7.723101,
-                            47.511004
-                        ],
-                        [
-                            7.723116,
-                            47.511386
-                        ],
-                        [
-                            7.723094,
-                            47.511522
-                        ],
-                        [
-                            7.722976,
-                            47.51197
-                        ],
-                        [
-                            7.722878,
-                            47.512614
-                        ],
-                        [
-                            7.722808,
-                            47.512598
-                        ],
-                        [
-                            7.722571,
-                            47.512541
-                        ],
-                        [
-                            7.722483,
-                            47.512521
-                        ],
-                        [
-                            7.722216,
-                            47.512449
-                        ],
-                        [
-                            7.721637,
-                            47.512353
-                        ],
-                        [
-                            7.72128,
-                            47.512323
-                        ],
-                        [
-                            7.720274,
-                            47.512268
-                        ],
-                        [
-                            7.719997,
-                            47.512245
-                        ],
-                        [
-                            7.719873,
-                            47.512233
-                        ],
-                        [
-                            7.719202,
-                            47.512173
-                        ],
-                        [
-                            7.718912,
-                            47.512146
-                        ]
-                    ],
-                    "type": "LineString"
-                }
-            }
-        ],
-        "bbox": [
-            7.718912,
-            47.483955,
-            7.734334,
-            47.512614
-        ]
-    },
-    {
-        "coordinates": [
-            [
-                7.7347783,
-                47.4839723
-            ],
-            [
                 7.736791,
                 47.453797
             ]
@@ -4163,28 +3515,28 @@
                 47.4839723
             ],
             [
-                7.690786,
-                47.522638
+                7.718853,
+                47.512438
             ]
         ],
-        "Name": "Coop Pronto Shop Pratteln Bahnhof",
-        "Distance": 5429,
+        "Name": "Coop Pronto Shop mit Tankstelle Frenkendorf",
+        "Distance": 3385,
         "FormatId": "pronto",
-        "Latitude": 47.522638,
-        "Longitude": 7.690786,
+        "Latitude": 47.512438,
+        "Longitude": 7.718853,
         "LogoUrl": "https://libs.coop.ch/logos-vst/coop-pronto-de.svg",
-        "ZipCode": "4133",
-        "CityName": "Pratteln",
-        "StreetName": "G\u00fcterstrasse",
-        "HouseNumber": "10",
+        "ZipCode": "4402",
+        "CityName": "Frenkendorf",
+        "StreetName": "Rheinstrasse",
+        "HouseNumber": "113D",
         "Open": true,
-        "OpeningTime": "05:00",
+        "OpeningTime": "06:00",
         "ClosingTime": "23:00",
         "type": "FeatureCollection",
         "metadata": {
             "attribution": "openrouteservice.org | OpenStreetMap contributors",
             "service": "routing",
-            "timestamp": 1698563278691,
+            "timestamp": 1698563278418,
             "query": {
                 "coordinates": [
                     [
@@ -4192,8 +3544,8 @@
                         47.4839723
                     ],
                     [
-                        7.690786,
-                        47.522638
+                        7.718853,
+                        47.512438
                     ]
                 ],
                 "profile": "driving-car",
@@ -4208,10 +3560,10 @@
         "features": [
             {
                 "bbox": [
-                    7.690776,
+                    7.718912,
                     47.483955,
                     7.734334,
-                    47.524147
+                    47.512614
                 ],
                 "type": "Feature",
                 "properties": {
@@ -4219,8 +3571,8 @@
                     "fare": 0,
                     "segments": [
                         {
-                            "distance": 7411.1,
-                            "duration": 877.9,
+                            "distance": 4049.3,
+                            "duration": 482.0,
                             "steps": [
                                 {
                                     "distance": 96.9,
@@ -4355,126 +3707,47 @@
                                     ]
                                 },
                                 {
-                                    "distance": 3130.0,
-                                    "duration": 229.6,
+                                    "distance": 2112.2,
+                                    "duration": 153.4,
                                     "type": 4,
                                     "instruction": "Turn slight left",
                                     "name": "-",
                                     "way_points": [
                                         58,
-                                        95
+                                        79
                                     ]
                                 },
                                 {
-                                    "distance": 159.3,
-                                    "duration": 25.7,
+                                    "distance": 180.3,
+                                    "duration": 25.1,
                                     "type": 13,
                                     "instruction": "Keep right",
                                     "name": "-",
                                     "way_points": [
-                                        95,
-                                        103
+                                        79,
+                                        83
                                     ]
                                 },
                                 {
-                                    "distance": 563.7,
-                                    "duration": 73.2,
-                                    "type": 7,
-                                    "instruction": "Enter the roundabout and take the 3rd exit onto Krummeneichstrasse, 2, 12",
-                                    "name": "Krummeneichstrasse, 2, 12",
-                                    "exit_number": 3,
-                                    "way_points": [
-                                        103,
-                                        121
-                                    ]
-                                },
-                                {
-                                    "distance": 702.0,
-                                    "duration": 70.7,
-                                    "type": 7,
-                                    "instruction": "Enter the roundabout and take the 2nd exit onto Krummeneichstrasse, 2, 12",
-                                    "name": "Krummeneichstrasse, 2, 12",
-                                    "exit_number": 2,
-                                    "way_points": [
-                                        121,
-                                        137
-                                    ]
-                                },
-                                {
-                                    "distance": 9.8,
-                                    "duration": 3.5,
+                                    "distance": 303.8,
+                                    "duration": 43.4,
                                     "type": 0,
-                                    "instruction": "Turn left",
-                                    "name": "-",
+                                    "instruction": "Turn left onto W\u00f6lferstrasse",
+                                    "name": "W\u00f6lferstrasse",
                                     "way_points": [
-                                        137,
-                                        138
-                                    ]
-                                },
-                                {
-                                    "distance": 314.2,
-                                    "duration": 43.8,
-                                    "type": 4,
-                                    "instruction": "Turn slight left onto Oberemattstrasse",
-                                    "name": "Oberemattstrasse",
-                                    "way_points": [
-                                        138,
-                                        148
-                                    ]
-                                },
-                                {
-                                    "distance": 29.8,
-                                    "duration": 7.2,
-                                    "type": 0,
-                                    "instruction": "Turn left onto Oberfeldstrasse",
-                                    "name": "Oberfeldstrasse",
-                                    "way_points": [
-                                        148,
-                                        149
-                                    ]
-                                },
-                                {
-                                    "distance": 109.4,
-                                    "duration": 13.1,
-                                    "type": 0,
-                                    "instruction": "Turn left onto In den Oberfeldreben",
-                                    "name": "In den Oberfeldreben",
-                                    "way_points": [
-                                        149,
-                                        150
-                                    ]
-                                },
-                                {
-                                    "distance": 855.3,
-                                    "duration": 130.7,
-                                    "type": 0,
-                                    "instruction": "Turn left onto Zehntenstrasse",
-                                    "name": "Zehntenstrasse",
-                                    "way_points": [
-                                        150,
-                                        160
-                                    ]
-                                },
-                                {
-                                    "distance": 84.7,
-                                    "duration": 20.3,
-                                    "type": 1,
-                                    "instruction": "Turn right onto G\u00fcterstrasse",
-                                    "name": "G\u00fcterstrasse",
-                                    "way_points": [
-                                        160,
-                                        162
+                                        83,
+                                        94
                                     ]
                                 },
                                 {
                                     "distance": 0.0,
                                     "duration": 0.0,
                                     "type": 10,
-                                    "instruction": "Arrive at G\u00fcterstrasse, on the right",
+                                    "instruction": "Arrive at W\u00f6lferstrasse, on the right",
                                     "name": "-",
                                     "way_points": [
-                                        162,
-                                        162
+                                        94,
+                                        94
                                     ]
                                 }
                             ]
@@ -4482,11 +3755,11 @@
                     ],
                     "way_points": [
                         0,
-                        162
+                        94
                     ],
                     "summary": {
-                        "distance": 7411.1,
-                        "duration": 877.9
+                        "distance": 4049.3,
+                        "duration": 482.0
                     }
                 },
                 "geometry": {
@@ -4812,336 +4085,64 @@
                             47.511004
                         ],
                         [
-                            7.722979,
-                            47.511524
+                            7.723116,
+                            47.511386
                         ],
                         [
-                            7.722191,
-                            47.514733
+                            7.723094,
+                            47.511522
                         ],
                         [
-                            7.721974,
-                            47.515246
+                            7.722976,
+                            47.51197
                         ],
                         [
-                            7.721854,
-                            47.515456
+                            7.722878,
+                            47.512614
                         ],
                         [
-                            7.721151,
-                            47.516525
+                            7.722808,
+                            47.512598
                         ],
                         [
-                            7.720932,
-                            47.5169
+                            7.722571,
+                            47.512541
                         ],
                         [
-                            7.720703,
-                            47.517372
+                            7.722483,
+                            47.512521
                         ],
                         [
-                            7.72046,
-                            47.51823
+                            7.722216,
+                            47.512449
                         ],
                         [
-                            7.720394,
-                            47.518387
+                            7.721637,
+                            47.512353
                         ],
                         [
-                            7.72029,
-                            47.518561
+                            7.72128,
+                            47.512323
                         ],
                         [
-                            7.720151,
-                            47.518698
+                            7.720274,
+                            47.512268
                         ],
                         [
-                            7.719935,
-                            47.518861
+                            7.719997,
+                            47.512245
                         ],
                         [
-                            7.719772,
-                            47.518955
+                            7.719873,
+                            47.512233
                         ],
                         [
-                            7.719562,
-                            47.519041
+                            7.719202,
+                            47.512173
                         ],
                         [
-                            7.719214,
-                            47.519125
-                        ],
-                        [
-                            7.718675,
-                            47.519218
-                        ],
-                        [
-                            7.718624,
-                            47.519277
-                        ],
-                        [
-                            7.718403,
-                            47.519347
-                        ],
-                        [
-                            7.718227,
-                            47.519421
-                        ],
-                        [
-                            7.718056,
-                            47.519516
-                        ],
-                        [
-                            7.71793,
-                            47.51962
-                        ],
-                        [
-                            7.717814,
-                            47.519761
-                        ],
-                        [
-                            7.717699,
-                            47.520001
-                        ],
-                        [
-                            7.717658,
-                            47.520362
-                        ],
-                        [
-                            7.71772,
-                            47.520399
-                        ],
-                        [
-                            7.717778,
-                            47.520469
-                        ],
-                        [
-                            7.717822,
-                            47.52054
-                        ],
-                        [
-                            7.717817,
-                            47.520629
-                        ],
-                        [
-                            7.717726,
-                            47.520714
-                        ],
-                        [
-                            7.717654,
-                            47.520764
-                        ],
-                        [
-                            7.717569,
-                            47.520793
-                        ],
-                        [
-                            7.717476,
-                            47.520809
-                        ],
-                        [
-                            7.717352,
-                            47.520803
-                        ],
-                        [
-                            7.71729,
-                            47.520789
-                        ],
-                        [
-                            7.717178,
-                            47.520726
-                        ],
-                        [
-                            7.716964,
-                            47.520839
-                        ],
-                        [
-                            7.716517,
-                            47.521112
-                        ],
-                        [
-                            7.714487,
-                            47.522297
-                        ],
-                        [
-                            7.713948,
-                            47.52258
-                        ],
-                        [
-                            7.713519,
-                            47.522772
-                        ],
-                        [
-                            7.713042,
-                            47.522952
-                        ],
-                        [
-                            7.712129,
-                            47.523178
-                        ],
-                        [
-                            7.712125,
-                            47.523254
-                        ],
-                        [
-                            7.712051,
-                            47.523311
-                        ],
-                        [
-                            7.711997,
-                            47.523324
-                        ],
-                        [
-                            7.71188,
-                            47.523307
-                        ],
-                        [
-                            7.711825,
-                            47.523268
-                        ],
-                        [
-                            7.711803,
-                            47.523215
-                        ],
-                        [
-                            7.711023,
-                            47.523272
-                        ],
-                        [
-                            7.708911,
-                            47.523384
-                        ],
-                        [
-                            7.707233,
-                            47.523462
-                        ],
-                        [
-                            7.706376,
-                            47.523521
-                        ],
-                        [
-                            7.706111,
-                            47.523525
-                        ],
-                        [
-                            7.705484,
-                            47.52359
-                        ],
-                        [
-                            7.70473,
-                            47.52373
-                        ],
-                        [
-                            7.704354,
-                            47.523826
-                        ],
-                        [
-                            7.704106,
-                            47.523907
-                        ],
-                        [
-                            7.703192,
-                            47.524147
-                        ],
-                        [
-                            7.703077,
-                            47.524107
-                        ],
-                        [
-                            7.702997,
-                            47.52405
-                        ],
-                        [
-                            7.702978,
-                            47.523989
-                        ],
-                        [
-                            7.702993,
-                            47.523884
-                        ],
-                        [
-                            7.70302,
-                            47.523847
-                        ],
-                        [
-                            7.703008,
-                            47.523675
-                        ],
-                        [
-                            7.702988,
-                            47.523477
-                        ],
-                        [
-                            7.702927,
-                            47.523064
-                        ],
-                        [
-                            7.702808,
-                            47.522297
-                        ],
-                        [
-                            7.70279,
-                            47.521974
-                        ],
-                        [
-                            7.702862,
-                            47.521318
-                        ],
-                        [
-                            7.703259,
-                            47.521323
-                        ],
-                        [
-                            7.703219,
-                            47.522306
-                        ],
-                        [
-                            7.702913,
-                            47.522312
-                        ],
-                        [
-                            7.702705,
-                            47.522316
-                        ],
-                        [
-                            7.702282,
-                            47.522325
-                        ],
-                        [
-                            7.697938,
-                            47.522444
-                        ],
-                        [
-                            7.697132,
-                            47.522467
-                        ],
-                        [
-                            7.694319,
-                            47.522499
-                        ],
-                        [
-                            7.692996,
-                            47.52252
-                        ],
-                        [
-                            7.69209,
-                            47.522533
-                        ],
-                        [
-                            7.691955,
-                            47.522498
-                        ],
-                        [
-                            7.691891,
-                            47.522436
-                        ],
-                        [
-                            7.691689,
-                            47.522477
-                        ],
-                        [
-                            7.690776,
-                            47.522508
+                            7.718912,
+                            47.512146
                         ]
                     ],
                     "type": "LineString"
@@ -5149,10 +4150,10 @@
             }
         ],
         "bbox": [
-            7.690776,
+            7.718912,
             47.483955,
             7.734334,
-            47.524147
+            47.512614
         ]
     },
     {
@@ -6202,6 +5203,1005 @@
         ],
         "bbox": [
             7.691741,
+            47.483955,
+            7.734334,
+            47.524147
+        ]
+    },
+    {
+        "coordinates": [
+            [
+                7.7347783,
+                47.4839723
+            ],
+            [
+                7.690786,
+                47.522638
+            ]
+        ],
+        "Name": "Coop Pronto Shop Pratteln Bahnhof",
+        "Distance": 5429,
+        "FormatId": "pronto",
+        "Latitude": 47.522638,
+        "Longitude": 7.690786,
+        "LogoUrl": "https://libs.coop.ch/logos-vst/coop-pronto-de.svg",
+        "ZipCode": "4133",
+        "CityName": "Pratteln",
+        "StreetName": "G\u00fcterstrasse",
+        "HouseNumber": "10",
+        "Open": true,
+        "OpeningTime": "05:00",
+        "ClosingTime": "23:00",
+        "type": "FeatureCollection",
+        "metadata": {
+            "attribution": "openrouteservice.org | OpenStreetMap contributors",
+            "service": "routing",
+            "timestamp": 1698563278691,
+            "query": {
+                "coordinates": [
+                    [
+                        7.7347783,
+                        47.4839723
+                    ],
+                    [
+                        7.690786,
+                        47.522638
+                    ]
+                ],
+                "profile": "driving-car",
+                "format": "geojson"
+            },
+            "engine": {
+                "version": "7.1.0",
+                "build_date": "2023-07-09T01:31:50Z",
+                "graph_date": "2023-10-22T10:16:37Z"
+            }
+        },
+        "features": [
+            {
+                "bbox": [
+                    7.690776,
+                    47.483955,
+                    7.734334,
+                    47.524147
+                ],
+                "type": "Feature",
+                "properties": {
+                    "transfers": 0,
+                    "fare": 0,
+                    "segments": [
+                        {
+                            "distance": 7411.1,
+                            "duration": 877.9,
+                            "steps": [
+                                {
+                                    "distance": 96.9,
+                                    "duration": 34.9,
+                                    "type": 11,
+                                    "instruction": "Head north on Fischmarkt",
+                                    "name": "Fischmarkt",
+                                    "way_points": [
+                                        0,
+                                        6
+                                    ]
+                                },
+                                {
+                                    "distance": 24.2,
+                                    "duration": 8.7,
+                                    "type": 0,
+                                    "instruction": "Turn left onto Freihofgasse",
+                                    "name": "Freihofgasse",
+                                    "way_points": [
+                                        6,
+                                        7
+                                    ]
+                                },
+                                {
+                                    "distance": 92.9,
+                                    "duration": 33.4,
+                                    "type": 1,
+                                    "instruction": "Turn right onto Sch\u00fctzenstrasse",
+                                    "name": "Sch\u00fctzenstrasse",
+                                    "way_points": [
+                                        7,
+                                        11
+                                    ]
+                                },
+                                {
+                                    "distance": 15.6,
+                                    "duration": 5.6,
+                                    "type": 0,
+                                    "instruction": "Turn left onto Rheinstrasse",
+                                    "name": "Rheinstrasse",
+                                    "way_points": [
+                                        11,
+                                        12
+                                    ]
+                                },
+                                {
+                                    "distance": 66.4,
+                                    "duration": 19.3,
+                                    "type": 1,
+                                    "instruction": "Turn right onto 2, 12",
+                                    "name": "2, 12",
+                                    "way_points": [
+                                        12,
+                                        15
+                                    ]
+                                },
+                                {
+                                    "distance": 19.4,
+                                    "duration": 7.0,
+                                    "type": 12,
+                                    "instruction": "Keep left onto 2, 12",
+                                    "name": "2, 12",
+                                    "way_points": [
+                                        15,
+                                        17
+                                    ]
+                                },
+                                {
+                                    "distance": 55.3,
+                                    "duration": 10.0,
+                                    "type": 0,
+                                    "instruction": "Turn left onto Weierweg, 2, 12",
+                                    "name": "Weierweg, 2, 12",
+                                    "way_points": [
+                                        17,
+                                        19
+                                    ]
+                                },
+                                {
+                                    "distance": 81.1,
+                                    "duration": 9.7,
+                                    "type": 4,
+                                    "instruction": "Turn slight left onto Gasstrasse, 2, 12",
+                                    "name": "Gasstrasse, 2, 12",
+                                    "way_points": [
+                                        19,
+                                        22
+                                    ]
+                                },
+                                {
+                                    "distance": 30.5,
+                                    "duration": 5.5,
+                                    "type": 13,
+                                    "instruction": "Keep right onto 2, 12",
+                                    "name": "2, 12",
+                                    "way_points": [
+                                        22,
+                                        24
+                                    ]
+                                },
+                                {
+                                    "distance": 829.2,
+                                    "duration": 95.1,
+                                    "type": 1,
+                                    "instruction": "Turn right onto Rheinstrasse, 2, 12",
+                                    "name": "Rheinstrasse, 2, 12",
+                                    "way_points": [
+                                        24,
+                                        51
+                                    ]
+                                },
+                                {
+                                    "distance": 111.1,
+                                    "duration": 20.0,
+                                    "type": 1,
+                                    "instruction": "Turn right",
+                                    "name": "-",
+                                    "way_points": [
+                                        51,
+                                        55
+                                    ]
+                                },
+                                {
+                                    "distance": 30.6,
+                                    "duration": 11.0,
+                                    "type": 12,
+                                    "instruction": "Keep left",
+                                    "name": "-",
+                                    "way_points": [
+                                        55,
+                                        58
+                                    ]
+                                },
+                                {
+                                    "distance": 3130.0,
+                                    "duration": 229.6,
+                                    "type": 4,
+                                    "instruction": "Turn slight left",
+                                    "name": "-",
+                                    "way_points": [
+                                        58,
+                                        95
+                                    ]
+                                },
+                                {
+                                    "distance": 159.3,
+                                    "duration": 25.7,
+                                    "type": 13,
+                                    "instruction": "Keep right",
+                                    "name": "-",
+                                    "way_points": [
+                                        95,
+                                        103
+                                    ]
+                                },
+                                {
+                                    "distance": 563.7,
+                                    "duration": 73.2,
+                                    "type": 7,
+                                    "instruction": "Enter the roundabout and take the 3rd exit onto Krummeneichstrasse, 2, 12",
+                                    "name": "Krummeneichstrasse, 2, 12",
+                                    "exit_number": 3,
+                                    "way_points": [
+                                        103,
+                                        121
+                                    ]
+                                },
+                                {
+                                    "distance": 702.0,
+                                    "duration": 70.7,
+                                    "type": 7,
+                                    "instruction": "Enter the roundabout and take the 2nd exit onto Krummeneichstrasse, 2, 12",
+                                    "name": "Krummeneichstrasse, 2, 12",
+                                    "exit_number": 2,
+                                    "way_points": [
+                                        121,
+                                        137
+                                    ]
+                                },
+                                {
+                                    "distance": 9.8,
+                                    "duration": 3.5,
+                                    "type": 0,
+                                    "instruction": "Turn left",
+                                    "name": "-",
+                                    "way_points": [
+                                        137,
+                                        138
+                                    ]
+                                },
+                                {
+                                    "distance": 314.2,
+                                    "duration": 43.8,
+                                    "type": 4,
+                                    "instruction": "Turn slight left onto Oberemattstrasse",
+                                    "name": "Oberemattstrasse",
+                                    "way_points": [
+                                        138,
+                                        148
+                                    ]
+                                },
+                                {
+                                    "distance": 29.8,
+                                    "duration": 7.2,
+                                    "type": 0,
+                                    "instruction": "Turn left onto Oberfeldstrasse",
+                                    "name": "Oberfeldstrasse",
+                                    "way_points": [
+                                        148,
+                                        149
+                                    ]
+                                },
+                                {
+                                    "distance": 109.4,
+                                    "duration": 13.1,
+                                    "type": 0,
+                                    "instruction": "Turn left onto In den Oberfeldreben",
+                                    "name": "In den Oberfeldreben",
+                                    "way_points": [
+                                        149,
+                                        150
+                                    ]
+                                },
+                                {
+                                    "distance": 855.3,
+                                    "duration": 130.7,
+                                    "type": 0,
+                                    "instruction": "Turn left onto Zehntenstrasse",
+                                    "name": "Zehntenstrasse",
+                                    "way_points": [
+                                        150,
+                                        160
+                                    ]
+                                },
+                                {
+                                    "distance": 84.7,
+                                    "duration": 20.3,
+                                    "type": 1,
+                                    "instruction": "Turn right onto G\u00fcterstrasse",
+                                    "name": "G\u00fcterstrasse",
+                                    "way_points": [
+                                        160,
+                                        162
+                                    ]
+                                },
+                                {
+                                    "distance": 0.0,
+                                    "duration": 0.0,
+                                    "type": 10,
+                                    "instruction": "Arrive at G\u00fcterstrasse, on the right",
+                                    "name": "-",
+                                    "way_points": [
+                                        162,
+                                        162
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "way_points": [
+                        0,
+                        162
+                    ],
+                    "summary": {
+                        "distance": 7411.1,
+                        "duration": 877.9
+                    }
+                },
+                "geometry": {
+                    "coordinates": [
+                        [
+                            7.734334,
+                            47.483955
+                        ],
+                        [
+                            7.734322,
+                            47.484096
+                        ],
+                        [
+                            7.734286,
+                            47.484177
+                        ],
+                        [
+                            7.734225,
+                            47.484222
+                        ],
+                        [
+                            7.734014,
+                            47.484321
+                        ],
+                        [
+                            7.733843,
+                            47.484504
+                        ],
+                        [
+                            7.733767,
+                            47.484691
+                        ],
+                        [
+                            7.733447,
+                            47.48467
+                        ],
+                        [
+                            7.73347,
+                            47.48493
+                        ],
+                        [
+                            7.733464,
+                            47.485203
+                        ],
+                        [
+                            7.733482,
+                            47.485292
+                        ],
+                        [
+                            7.733571,
+                            47.485495
+                        ],
+                        [
+                            7.733415,
+                            47.485587
+                        ],
+                        [
+                            7.733494,
+                            47.485644
+                        ],
+                        [
+                            7.733758,
+                            47.485942
+                        ],
+                        [
+                            7.733938,
+                            47.486064
+                        ],
+                        [
+                            7.733986,
+                            47.486139
+                        ],
+                        [
+                            7.734009,
+                            47.48623
+                        ],
+                        [
+                            7.733601,
+                            47.486546
+                        ],
+                        [
+                            7.733495,
+                            47.486576
+                        ],
+                        [
+                            7.733343,
+                            47.486542
+                        ],
+                        [
+                            7.733254,
+                            47.486484
+                        ],
+                        [
+                            7.732778,
+                            47.486053
+                        ],
+                        [
+                            7.732592,
+                            47.485987
+                        ],
+                        [
+                            7.732398,
+                            47.485986
+                        ],
+                        [
+                            7.732018,
+                            47.486274
+                        ],
+                        [
+                            7.731913,
+                            47.486344
+                        ],
+                        [
+                            7.731394,
+                            47.486659
+                        ],
+                        [
+                            7.731274,
+                            47.486731
+                        ],
+                        [
+                            7.731025,
+                            47.486868
+                        ],
+                        [
+                            7.7307,
+                            47.487047
+                        ],
+                        [
+                            7.730427,
+                            47.487205
+                        ],
+                        [
+                            7.72952,
+                            47.487752
+                        ],
+                        [
+                            7.729492,
+                            47.487769
+                        ],
+                        [
+                            7.729302,
+                            47.487887
+                        ],
+                        [
+                            7.729025,
+                            47.488069
+                        ],
+                        [
+                            7.728737,
+                            47.48828
+                        ],
+                        [
+                            7.728183,
+                            47.488681
+                        ],
+                        [
+                            7.727717,
+                            47.489056
+                        ],
+                        [
+                            7.727605,
+                            47.489222
+                        ],
+                        [
+                            7.727477,
+                            47.489593
+                        ],
+                        [
+                            7.727444,
+                            47.489745
+                        ],
+                        [
+                            7.727374,
+                            47.489912
+                        ],
+                        [
+                            7.727179,
+                            47.490181
+                        ],
+                        [
+                            7.726859,
+                            47.490472
+                        ],
+                        [
+                            7.726775,
+                            47.490558
+                        ],
+                        [
+                            7.726684,
+                            47.490622
+                        ],
+                        [
+                            7.72605,
+                            47.490981
+                        ],
+                        [
+                            7.72589,
+                            47.491072
+                        ],
+                        [
+                            7.725718,
+                            47.491202
+                        ],
+                        [
+                            7.725544,
+                            47.491334
+                        ],
+                        [
+                            7.725332,
+                            47.491533
+                        ],
+                        [
+                            7.725364,
+                            47.491625
+                        ],
+                        [
+                            7.725358,
+                            47.491743
+                        ],
+                        [
+                            7.725476,
+                            47.49199
+                        ],
+                        [
+                            7.726096,
+                            47.492311
+                        ],
+                        [
+                            7.726219,
+                            47.492402
+                        ],
+                        [
+                            7.726302,
+                            47.49248
+                        ],
+                        [
+                            7.726329,
+                            47.492532
+                        ],
+                        [
+                            7.726298,
+                            47.492585
+                        ],
+                        [
+                            7.726221,
+                            47.492654
+                        ],
+                        [
+                            7.725731,
+                            47.493003
+                        ],
+                        [
+                            7.725455,
+                            47.493269
+                        ],
+                        [
+                            7.725292,
+                            47.493464
+                        ],
+                        [
+                            7.725215,
+                            47.493582
+                        ],
+                        [
+                            7.725053,
+                            47.493766
+                        ],
+                        [
+                            7.723894,
+                            47.497108
+                        ],
+                        [
+                            7.723296,
+                            47.498964
+                        ],
+                        [
+                            7.722869,
+                            47.500359
+                        ],
+                        [
+                            7.72252,
+                            47.501687
+                        ],
+                        [
+                            7.722261,
+                            47.50313
+                        ],
+                        [
+                            7.72227,
+                            47.503674
+                        ],
+                        [
+                            7.722337,
+                            47.504178
+                        ],
+                        [
+                            7.722641,
+                            47.505186
+                        ],
+                        [
+                            7.722855,
+                            47.506023
+                        ],
+                        [
+                            7.723039,
+                            47.507226
+                        ],
+                        [
+                            7.7232,
+                            47.508473
+                        ],
+                        [
+                            7.723181,
+                            47.509539
+                        ],
+                        [
+                            7.723171,
+                            47.51016
+                        ],
+                        [
+                            7.723101,
+                            47.511004
+                        ],
+                        [
+                            7.722979,
+                            47.511524
+                        ],
+                        [
+                            7.722191,
+                            47.514733
+                        ],
+                        [
+                            7.721974,
+                            47.515246
+                        ],
+                        [
+                            7.721854,
+                            47.515456
+                        ],
+                        [
+                            7.721151,
+                            47.516525
+                        ],
+                        [
+                            7.720932,
+                            47.5169
+                        ],
+                        [
+                            7.720703,
+                            47.517372
+                        ],
+                        [
+                            7.72046,
+                            47.51823
+                        ],
+                        [
+                            7.720394,
+                            47.518387
+                        ],
+                        [
+                            7.72029,
+                            47.518561
+                        ],
+                        [
+                            7.720151,
+                            47.518698
+                        ],
+                        [
+                            7.719935,
+                            47.518861
+                        ],
+                        [
+                            7.719772,
+                            47.518955
+                        ],
+                        [
+                            7.719562,
+                            47.519041
+                        ],
+                        [
+                            7.719214,
+                            47.519125
+                        ],
+                        [
+                            7.718675,
+                            47.519218
+                        ],
+                        [
+                            7.718624,
+                            47.519277
+                        ],
+                        [
+                            7.718403,
+                            47.519347
+                        ],
+                        [
+                            7.718227,
+                            47.519421
+                        ],
+                        [
+                            7.718056,
+                            47.519516
+                        ],
+                        [
+                            7.71793,
+                            47.51962
+                        ],
+                        [
+                            7.717814,
+                            47.519761
+                        ],
+                        [
+                            7.717699,
+                            47.520001
+                        ],
+                        [
+                            7.717658,
+                            47.520362
+                        ],
+                        [
+                            7.71772,
+                            47.520399
+                        ],
+                        [
+                            7.717778,
+                            47.520469
+                        ],
+                        [
+                            7.717822,
+                            47.52054
+                        ],
+                        [
+                            7.717817,
+                            47.520629
+                        ],
+                        [
+                            7.717726,
+                            47.520714
+                        ],
+                        [
+                            7.717654,
+                            47.520764
+                        ],
+                        [
+                            7.717569,
+                            47.520793
+                        ],
+                        [
+                            7.717476,
+                            47.520809
+                        ],
+                        [
+                            7.717352,
+                            47.520803
+                        ],
+                        [
+                            7.71729,
+                            47.520789
+                        ],
+                        [
+                            7.717178,
+                            47.520726
+                        ],
+                        [
+                            7.716964,
+                            47.520839
+                        ],
+                        [
+                            7.716517,
+                            47.521112
+                        ],
+                        [
+                            7.714487,
+                            47.522297
+                        ],
+                        [
+                            7.713948,
+                            47.52258
+                        ],
+                        [
+                            7.713519,
+                            47.522772
+                        ],
+                        [
+                            7.713042,
+                            47.522952
+                        ],
+                        [
+                            7.712129,
+                            47.523178
+                        ],
+                        [
+                            7.712125,
+                            47.523254
+                        ],
+                        [
+                            7.712051,
+                            47.523311
+                        ],
+                        [
+                            7.711997,
+                            47.523324
+                        ],
+                        [
+                            7.71188,
+                            47.523307
+                        ],
+                        [
+                            7.711825,
+                            47.523268
+                        ],
+                        [
+                            7.711803,
+                            47.523215
+                        ],
+                        [
+                            7.711023,
+                            47.523272
+                        ],
+                        [
+                            7.708911,
+                            47.523384
+                        ],
+                        [
+                            7.707233,
+                            47.523462
+                        ],
+                        [
+                            7.706376,
+                            47.523521
+                        ],
+                        [
+                            7.706111,
+                            47.523525
+                        ],
+                        [
+                            7.705484,
+                            47.52359
+                        ],
+                        [
+                            7.70473,
+                            47.52373
+                        ],
+                        [
+                            7.704354,
+                            47.523826
+                        ],
+                        [
+                            7.704106,
+                            47.523907
+                        ],
+                        [
+                            7.703192,
+                            47.524147
+                        ],
+                        [
+                            7.703077,
+                            47.524107
+                        ],
+                        [
+                            7.702997,
+                            47.52405
+                        ],
+                        [
+                            7.702978,
+                            47.523989
+                        ],
+                        [
+                            7.702993,
+                            47.523884
+                        ],
+                        [
+                            7.70302,
+                            47.523847
+                        ],
+                        [
+                            7.703008,
+                            47.523675
+                        ],
+                        [
+                            7.702988,
+                            47.523477
+                        ],
+                        [
+                            7.702927,
+                            47.523064
+                        ],
+                        [
+                            7.702808,
+                            47.522297
+                        ],
+                        [
+                            7.70279,
+                            47.521974
+                        ],
+                        [
+                            7.702862,
+                            47.521318
+                        ],
+                        [
+                            7.703259,
+                            47.521323
+                        ],
+                        [
+                            7.703219,
+                            47.522306
+                        ],
+                        [
+                            7.702913,
+                            47.522312
+                        ],
+                        [
+                            7.702705,
+                            47.522316
+                        ],
+                        [
+                            7.702282,
+                            47.522325
+                        ],
+                        [
+                            7.697938,
+                            47.522444
+                        ],
+                        [
+                            7.697132,
+                            47.522467
+                        ],
+                        [
+                            7.694319,
+                            47.522499
+                        ],
+                        [
+                            7.692996,
+                            47.52252
+                        ],
+                        [
+                            7.69209,
+                            47.522533
+                        ],
+                        [
+                            7.691955,
+                            47.522498
+                        ],
+                        [
+                            7.691891,
+                            47.522436
+                        ],
+                        [
+                            7.691689,
+                            47.522477
+                        ],
+                        [
+                            7.690776,
+                            47.522508
+                        ]
+                    ],
+                    "type": "LineString"
+                }
+            }
+        ],
+        "bbox": [
+            7.690776,
             47.483955,
             7.734334,
             47.524147
