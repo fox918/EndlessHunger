@@ -1,79 +1,101 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>🍔</title>
+    <title>🍔</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/white-contrast.css">
-		<link rel="stylesheet" href="https://cdn.netilion.endress.com/design/0.0.69/styles/netilion.min.css">
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/white-contrast.css">
+    <link rel="stylesheet" href="https://cdn.netilion.endress.com/design/0.0.69/styles/netilion.min.css">
 
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-		<style>
-			h1   {
-				font-size: 40px;
-				position: relative;
-				color: white;
-				font-family: EuH;
-				font-style: normal; }
-			.eh_logo{width: 50%;
-				position: relative;
-				top: 20px; left: 20px;
-				padding: 15px;
-				border-radius: 20px;
-				background-color: white}
-		</style>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-background="assets/mountains-5958421_1920.jpg" style="color: #F49B01">
-					<h2 class="r-fit-text" style="color: white">Welcome to switzerland</h2>
-					<div class="r-stretch"></div>
-				</section>
-				<section data-background="assets/fondue-708185_1920.jpg">
-					<div class="r-stretch"></div>
-					<h2 class="r-fit-text"  style="color: white">FONDUE</h2>
-				</section>
-				<section data-background="assets/snack-363835_1920.jpg">
-					<h1 class="r-fit-text" style="color: white">Büüüündnerfleisch</h1>
-					<div class="r-stretch"></div>
-				</section>
-				<section data-background="assets/hash-browns-2411877_1920.jpg">
-					<h4 style="color: white; font-size: 80px">Rösti</h4>
-				</section>
-				<section data-background="assets/raclette-4498118_1920.jpg">
-				</section>
-				<section data-background="assets/coop.jpeg">
-				</section>
-				<section>
-					<a class="r-fit-text" href="https://hack.do.oliverwisler.ch/" target="_blank">DEMO TIME</a>
-				</section>
-				<section data-background="assets/spaghetti-1932466_1920.jpg">
-					<object type="image/svg+xml" data="assets/logo_with_claim.svg" class="eh_logo"></object>
-				</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <style>
+        h1 {
+            font-size: 40px;
+            position: relative;
+            color: white;
+            font-family: EuH;
+            font-style: normal;
+        }
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+        .eh_logo {
+            width: 50%;
+            position: relative;
+            top: 20px;
+            left: 20px;
+            padding: 15px;
+            border-radius: 20px;
+            background-color: white
+        }
+    </style>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section data-background="assets/mountains-5958421_1920.jpg" style="color: #F49B01">
+            <h2 class="r-fit-text" style="color: white">Welcome to switzerland</h2>
+            <div class="r-stretch"></div>
+        </section>
+        <section data-background="assets/fondue-708185_1920.jpg">
+            <div class="r-stretch"></div>
+            <h2 class="r-fit-text" style="color: white">FONDUE</h2>
+        </section>
+        <section data-background="assets/snack-363835_1920.jpg">
+            <h1 class="r-fit-text" style="color: white">Büüüündnerfleisch</h1>
+            <div class="r-stretch"></div>
+        </section>
+        <section data-background="assets/hash-browns-2411877_1920.jpg">
+            <h4 style="color: white; font-size: 80px">Rösti</h4>
+        </section>
+        <section data-background="assets/raclette-4498118_1920.jpg">
+        </section>
+        <section>
+            <img src="assets/fridge.jpg">
+        </section>
+        <section data-background="assets/coop.jpeg">
+        </section>
+        <section>
+            <a class="r-fit-text" href="https://hack.do.oliverwisler.ch/" target="_blank">DEMO TIME</a>
+        </section>
+        <section style="text-align: left">
+            <h3>Backend</h3>
+            <ul>
+                <li>Coop Locations</li>
+                <li>Routing (<a href="https://github.com/GIScience/openrouteservice"
+                                target="_blank">OpenRouteService</a>)
+                </li>
+            </ul>
+            <h3>Frontend</h3>
+            <ul>
+                <li>Plain HTML</li>
+                <li>jQuery</li>
+            </ul>
+        </section>
+        <section data-background="assets/spaghetti-1932466_1920.jpg">
+            <object type="image/svg+xml" data="assets/logo_with_claim.svg" class="eh_logo"></object>
+        </section>
+    </div>
+</div>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script>
+  // More info about initialization & config:
+  // - https://revealjs.com/initialization/
+  // - https://revealjs.com/config/
+  Reveal.initialize({
+    hash: true,
+
+    // Learn about plugins: https://revealjs.com/plugins/
+    plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+  });
+</script>
+</body>
 </html>
