@@ -132,6 +132,36 @@
     <script>
         var map = L.map('map').setView([46.8,8.13], 8);
     
+        const getRouteData = (searchTerm,data) => {
+            $.getJSON(
+                    "https://basel.do.oliverwisler.ch/backend/routeing",
+                    {location:searchTerm,routingprofile:data},
+                     function(data){
+                        console.log(data);
+                        markerLayer.clearLayers();
+                        
+                        data.forEach((element) => {
+                            const lat = parseFloat(element.Latitude);
+                            const lon = parseFloat(element.Longitude);
+                            L.marker([lat,lon]).addTo(markerLayer);
+
+                            
+                            
+                        })
+                        const myLat = parseFloat(data[0].coordinates[0][1]);
+                        const myLon = parseFloat(data[0].coordinates[0][0]);
+                        
+                        var coopIcon = L.icon({
+                            iconUrl: 'src/myLocationIcon.jpg',
+                            iconSize: [30, 35],
+                        });
+            
+                        map.flyTo([myLat, myLon], 12.2);
+                        L.marker([myLat, myLon], {icon: coopIcon}).addTo(markerLayer);
+                        L.geoJSON(data[0].features).addTo(markerLayer);  
+                    });
+        }
+
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
             attribution: '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
@@ -159,8 +189,9 @@
                             
                             
                         })
-                        const myLat = parseFloat(data[0].coordinates[0][1]);
-                        const myLon = parseFloat(data[0].coordinates[0][0]);
+                        const myLat = parseFloat(data[0].coordinates[1]);
+                        const myLon = parseFloat(data[0].coordinates[0]);
+                        
                         var coopIcon = L.icon({
                             iconUrl: 'src/myLocationIcon.jpg',
                             iconSize: [30, 35],
@@ -168,17 +199,35 @@
             
                         map.flyTo([myLat, myLon], 12.2);
                         L.marker([myLat, myLon], {icon: coopIcon}).addTo(markerLayer);
-                        L.geoJSON(data[0].features).addTo(markerLayer);  
-                    });  
+                        //L.geoJSON(data[0].features).addTo(markerLayer);  
+                    });
                    
             });
         
+            $("#onFeet").click(function(){
+                const searchTerm = $("#myInput").val().trim();
+                getRouteData(searchTerm,"foot-walking")
+            });
+            $("#onBycicle").click(function(){
+                const searchTerm = $("#myInput").val().trim();
+                getRouteData(searchTerm,"cycling-regular")
+            });
+            $("#byCar").click(function(){
+                const searchTerm = $("#myInput").val().trim();
+                getRouteData(searchTerm,"driving-car")
+            });
+            $("#byHelicopter").click(function(){
+                const searchTerm = $("#myInput").val().trim();
+                getRouteData(searchTerm,"foot-walking")
+            });
         });
         </script>
   </section>
  
   <aside>  
-  
+  <table>
+        
+  </table>
 
   </aside>
  
