@@ -29,15 +29,15 @@ def locations():
     
 @app.route('/calculations', methods=['GET'])
 def calculations():
-    # location = request.args.get('location')
-    # filter_value = request.args.get('filter')
-    # originCoordinates, coopLocations = getCoopLocations(location, 10, time_filter=False)
-    # calculationDatas = getAllRoutes("driving-car", coopLocations)
-    # return jsonify(calculationDatas)
     location = request.args.get('location')
     filter_value = request.args.get('filter')
+    originCoordinates, coopLocations = getCoopLocations(location, 10, time_filter=False)
+    calculationDatas = getAllRoutes("driving-car", coopLocations, originCoordinates)
+    return jsonify(calculationDatas)
+    # location = request.args.get('location')
+    # filter_value = request.args.get('filter')
 
-    return f'Location: {location}, Filter: {filter_value}'
+    # return f'Location: {location}, Filter: {filter_value}'
 
 if __name__ == '__main__':
     app.run()
