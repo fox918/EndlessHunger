@@ -5,3 +5,4 @@ jsonify
 requests
 geopy
 python-dotenv
+numpy
