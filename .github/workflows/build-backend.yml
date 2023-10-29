@@ -42,5 +42,7 @@ jobs:
           context: ./backend
           platforms: linux/amd64,linux/arm64
           push: true
+          build-args: |
+            "API_AUTH_TOKEN=${{ secrets.API_AUTH_TOKEN }}"
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
