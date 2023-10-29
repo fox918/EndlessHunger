@@ -1,6 +1,7 @@
 import requests
 import json
 import time
+import os
 from dotenv import load_dotenv
 import xml.etree.ElementTree as ET# Constructing the XML elements and attributes
 from coop_locations import getCoopLocations
@@ -12,6 +13,7 @@ def getRoute(coopLocations, routingProfile, originCoordinates):
     body = {"coordinates": [[originCoordinates.get("Longitude"),originCoordinates.get("Latitude")], [longitude, latitude]]}
     
     load_dotenv()
+    authorization = os.getenv("authorization")
     
     headers = {
         'Accept': 'application/json, application/geo+json, application/gpx+xml, img/png; charset=utf-8',
@@ -66,6 +68,9 @@ def getAllRoutes(routingProfile, coopLocations,originCoordinates):
 
     else:
         print("Wrong Routing Profile", routingProfile)
+        
+def getBestRoute(routingProfile, coopLocations,originCoordinates):
+    getAllRoutes(routingProfile, coopLocations, originCoordinates)
 
 if __name__ == '__main__':
     originCoordinates, coopLocations = getCoopLocations("Basel", time_filter=False)
