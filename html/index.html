@@ -131,7 +131,7 @@
   <section>
     <div id="map"></div>     
     <script>
-        var map = L.map('map').setView([48.6, 10], 8);
+        var map = L.map('map').setView([46.8,8.13], 8);
     
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
             attribution: '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -158,11 +158,16 @@
                         })
                         const myLat = parseFloat(data[0].coordinates[0][1]);
                         const myLon = parseFloat(data[0].coordinates[0][0]);
-                        
-                        map.flyTo([myLat, myLon], 13);
-                        L.marker([myLat, myLon].addTo(map), );
+                        var coopIcon = L.icon({
+                            iconUrl: 'src/myLocationIcon.jpg',
+                            iconSize: [30, 35],
+                        });
+            
+                        map.flyTo([myLat, myLon], 11);
+                        L.marker([myLat, myLon], {icon: coopIcon}).addTo(map);
+                        L.geoJSON(data[0].features).addTo(map);  
                     });  
-                //L.geoJSON(element).addTo(map);     
+                   
             });
         
         });
