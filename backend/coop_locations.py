@@ -94,9 +94,9 @@ def save_to_file(cities):
         json.dump(cities, file, ensure_ascii=False, indent=4)
 
 
-cities = fetch_swiss_cities()
-save_to_file(cities)
-print(f"Data saved to swiss_cities_by_population_with_canton.json.")
+# cities = fetch_swiss_cities()
+# save_to_file(cities)
+# print(f"Data saved to swiss_cities_by_population_with_canton.json.")
 
 
 
@@ -250,7 +250,7 @@ def getCoopLocations(locationName, search_radius=100, time_filter=False):
         qualified_coops
     )
 
-# getCoopLocations("Basel", 10, time_filter=False)
+getCoopLocations("Basel", 10, time_filter=False)
 
 
 
