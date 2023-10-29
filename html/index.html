@@ -67,9 +67,7 @@
 <body>
 <main>
 
-    <script type="application/javascript">
-        
-      </script>
+   
 
 
   <header>
@@ -121,9 +119,6 @@
          </svg>
     </button>
 
-    <label>
-        <input type="checkbox" id="filterCBox" style = "position:relative; left:20px;">
-    </label>
 
   </header>
  
@@ -147,11 +142,11 @@
         $(document).ready(function(){
             $("#search").click(function(){
                 const searchTerm = $("#myInput").val().trim();
-                const onlyOpened = $("#filetCBox").val();
+                
                
                 $.getJSON(
                     "https://hack.do.oliverwisler.ch/backend/calculations",
-                    {location:searchTerm,filter:onlyOpened},
+                    {location:searchTerm},
                      function(data){
                         console.log(data);
                         markerLayer.clearLayers();
@@ -183,8 +178,7 @@
   </section>
  
   <aside>  
-    <div id="coopList"></div>   
-   
+  
 
   </aside>
  
