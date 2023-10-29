@@ -201,13 +201,17 @@
 
                             const tableBlock = $("#coops").append(`<tr>\
                                                 <td>${element.Name}</td>\
-                                                <td> ${parseFloat(element.Distance)/1000}</td>\
+                                                <td> ${parseFloat(element.Distance)/1000}km</td>\
                                             </tr>\
                                             <tr>\
-                                                <td>${element.StreetName}</td>\
-                                                <td>${element.HouseNumber}</td>\
-                                                <td>${element.CityName}</td>\
+                                                <td>${element.StreetName} ${element.HouseNumber}, ${element.CityName}</td>\
+                                                <td> </td>\
+                                            </tr> \
+                                            <tr>\
+                                                <td><hr></td>\
+                                                <td><hr></td>\
                                             </tr>`);
+
                             
                         })
                         const myLat = parseFloat(data[0].coordinates[1]);
