@@ -40,32 +40,49 @@ def get_unique_format_ids(lat, lng, numCoops):
 
 # get_unique_format_ids(lat, lng, numCoops)
 
-import requests
-import json
 
 def fetch_swiss_cities():
     overpass_url = "http://overpass-api.de/api/interpreter"
     
-    # This query fetches all populated places (cities, towns, villages, etc.) in Switzerland.
+    # This query fetches all populated places (cities, towns, villages, etc.) in Switzerland
+    # and their associated canton.
     overpass_query = """
         [out:json];
         area["ISO3166-1"="CH"][admin_level=2];
-        (node["place"~"city|town|village"](area);
+        (
+         node["place"~"city|town|village"](area);
          way["place"~"city|town|village"](area);
          relation["place"~"city|town|village"](area);
         );
         out center;
+        foreach(
+            is_in->.a;
+            area.a["admin_level"="4"];
+            out tags;
+        );
     """
     
     response = requests.get(overpass_url, params={'data': overpass_query})
     data = response.json()
 
     cities = []
-    for element in data['elements']:
-        if 'tags' in element:
+    idx = 0
+
+    while idx < len(data['elements']):
+        element = data['elements'][idx]
+        
+        if element['type'] in ['node', 'way', 'relation'] and 'tags' in element:
             name = element['tags'].get('name', 'Unknown')
-            population = int(element['tags'].get('population', 0)) # Convert population to integer
-            cities.append((name, population))
+            population = int(element['tags'].get('population', 0))
+            
+            # Increment index to capture the canton information
+            idx += 1
+            canton_element = data['elements'][idx]
+            canton = canton_element['tags'].get('ref', 'Unknown')
+            
+            cities.append((f"{name}, {canton}", population))
+        
+        idx += 1
 
     # Sort cities by population in descending order
     cities.sort(key=lambda x: x[1], reverse=True)
@@ -73,18 +90,18 @@ def fetch_swiss_cities():
     return cities
 
 def save_to_file(cities):
-    with open('swiss_cities_by_population.json', 'w', encoding='utf-8') as file:
+    with open('swiss_cities_by_population_with_canton.json', 'w', encoding='utf-8') as file:
         json.dump(cities, file, ensure_ascii=False, indent=4)
 
 
 # cities = fetch_swiss_cities()
 # save_to_file(cities)
-# print(f"Data saved to swiss_cities_by_population.json.")
+# print(f"Data saved to swiss_cities_by_population_with_canton.json.")
 
 
 
 
-def getCoopLocations(locationName, search_radius=10, time_filter=True):
+def getCoopLocations(locationName, search_radius=100, time_filter=False):
     
     def getOriginCoordinates(locationName):
         """Get the latitude and longitude of the given location name."""
@@ -169,7 +186,7 @@ def getCoopLocations(locationName, search_radius=10, time_filter=True):
             
             if formatId in food_offering_formats and distance <= search_radius * 1000 and (not time_filter or openStatus):
                 qualified_coops.append(create_json(coop, openingTime, closingTime, openStatus))
-            if len(qualified_coops) >= 10 or distance > search_radius * 1000:
+            if len(qualified_coops) >= 5 or distance > search_radius * 1000:
                 break
         return qualified_coops
 

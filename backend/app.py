@@ -11,34 +11,26 @@ CORS(app)
 @app.route('/locations')
 
 def locations():
-    coopData = getCoopLocations("Basel", 10)
+    coopData = getCoopLocations("Basel")
     return jsonify(coopData)
-
-    
-# @app.route('/route/<variable1>/<variable2>')
-# def route(variable1, variable2):
-#     # variable1 und variable2 sind die empfangenen URL-Parameter
-#     return f'Variable 1: {variable1}, Variable 2: {variable2}'
-
-# @app.route('/search/<searchstring>', methods=['GET'])
-   
-# def serach(searchstring):
-#         originCoordinates, coopLocations = getCoopLocations(searchstring, 10, time_filter=False)
-#         calculationDatas = getAllRoutes("driving-car", coopLocations)
-#         return jsonify(calculationDatas)
     
 @app.route('/calculations', methods=['GET'])
 def calculations():
     location = request.args.get('location')
     filter_value = request.args.get('filter')
-    originCoordinates, coopLocations = getCoopLocations(location, 10, time_filter=False)
+    originCoordinates, coopLocations = getCoopLocations(location, time_filter=False)
+    # calculationDatas = getAllRoutes("driving-car", coopLocations, originCoordinates)
+    body = {"coordinates": [[originCoordinates.get("Longitude"),originCoordinates.get("Latitude")]]}
+    return jsonify({**body, **coopLocations})
+
+@app.route('/routeing', methods=['GET'])
+def routeing():
+    routingProfile = request.args.get('routingprofile')
+    location = request.args.get('location')
+    filter_value = request.args.get('filter')
+    originCoordinates, coopLocations = getCoopLocations(location, time_filter=False)
     calculationDatas = getAllRoutes("driving-car", coopLocations, originCoordinates)
     return jsonify(calculationDatas)
-
-    # location = request.args.get('location')
-    # filter_value = request.args.get('filter')
-
-    # return f'Location: {location}, Filter: {filter_value}'
 
 if __name__ == '__main__':
     app.run()
