@@ -166,6 +166,10 @@ def getCoopLocations(locationName, search_radius=100, time_filter=False):
     def filter_coops(coops, food_offering_formats, time_filter=True):
         """Filter coops based on criteria."""
         qualified_coops = []
+        seen_addresses = set()
+        none_address_entries = []
+        duplicate_entries = []
+        
         for coop in coops:
             formatId = coop.get('formatId', '').lower()
             distance = int(coop.get('distance'))
@@ -184,12 +188,29 @@ def getCoopLocations(locationName, search_radius=100, time_filter=False):
             # Check if the coop is open now
             openStatus = is_open_now(coop)
             
+            address_key = (coop.get('StreetName'), coop.get('HouseNumber'), coop.get('CityName'))
+            if None in address_key:
+                none_address_entries.append(address_key)
+            elif address_key in seen_addresses:
+                duplicate_entries.append(address_key)
+                continue  # Skip duplicates
+            seen_addresses.add(address_key)
+            
             if formatId in food_offering_formats and distance <= search_radius * 1000 and (not time_filter or openStatus):
                 qualified_coops.append(create_json(coop, openingTime, closingTime, openStatus))
             if len(qualified_coops) >= 5 or distance > search_radius * 1000:
                 break
+        
+        # Print insights for better understanding
+        print(f"Coops with incomplete addresses: {len(none_address_entries)}")
+        if none_address_entries:
+            print("Sample of Coops with incomplete addresses:", none_address_entries[:5])
+        print(f"Duplicate Coops: {len(duplicate_entries)}")
+        if duplicate_entries:
+            print("Sample of Duplicate Coops:", duplicate_entries[:5])
+        
         return qualified_coops
-
+    
 
 
 
@@ -239,7 +260,7 @@ def getCoopLocations(locationName, search_radius=100, time_filter=False):
     try:
         with open(outputPath, 'w', encoding='utf-8') as f:
             json.dump(qualified_coops, f, ensure_ascii=False, indent=4)
-        print(qualified_coops)
+        print("Qualified Coops: "+ str(len(qualified_coops)))
         print(f'Data written to {outputPath}')
     except Exception as e:
         print(f'Failed to write data to {outputPath}: {e}')
