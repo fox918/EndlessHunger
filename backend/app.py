@@ -24,7 +24,7 @@ def calculations():
     return jsonify({**body, **coopLocations})
 
 @app.route('/routeing', methods=['GET'])
-def calculations():
+def routeing():
     routingProfile = request.args.get('routingprofile')
     location = request.args.get('location')
     filter_value = request.args.get('filter')
