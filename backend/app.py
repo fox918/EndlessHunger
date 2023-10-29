@@ -34,6 +34,7 @@ def calculations():
     originCoordinates, coopLocations = getCoopLocations(location, 10, time_filter=False)
     calculationDatas = getAllRoutes("driving-car", coopLocations, originCoordinates)
     return jsonify(calculationDatas)
+
     # location = request.args.get('location')
     # filter_value = request.args.get('filter')
 
