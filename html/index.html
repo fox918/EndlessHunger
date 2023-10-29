@@ -180,13 +180,22 @@
                      function(data){
                         console.log(data);
                         markerLayer.clearLayers();
+                        $("#coops").empty();
                         
                         data.forEach((element) => {
                             const lat = parseFloat(element.Latitude);
                             const lon = parseFloat(element.Longitude);
                             L.marker([lat,lon]).addTo(markerLayer);
 
-                            
+                            const tableBlock = $("#coops").append(`<tr>\
+                                                <td>${element.Name}</td>\
+                                                <td> ${parseFloat(element.Distance)/1000}</td>\
+                                            </tr>\
+                                            <tr>\
+                                                <td>${element.StreetName}</td>\
+                                                <td>${element.HouseNumber}</td>\
+                                                <td>${element.CityName}</td>\
+                                            </tr>`);
                             
                         })
                         const myLat = parseFloat(data[0].coordinates[1]);
@@ -196,7 +205,11 @@
                             iconUrl: 'src/myLocationIcon.jpg',
                             iconSize: [30, 35],
                         });
-            
+                        
+                        
+
+                      
+
                         map.flyTo([myLat, myLon], 12.2);
                         L.marker([myLat, myLon], {icon: coopIcon}).addTo(markerLayer);
                         //L.geoJSON(data[0].features).addTo(markerLayer);  
@@ -225,15 +238,12 @@
   </section>
  
   <aside>  
-  <table>
+  <table id="coops">
         
   </table>
 
   </aside>
- 
-  <footer>
-    Fusszeile 
-  </footer>
+
 
 </main>   
 </body>
