@@ -145,7 +145,7 @@
                 const onlyOpened = true;
 
                 $.getJSON(
-                    "http://127.0.0.1:5000/calculations",//https://basel.do.oliverwisler.ch/backend/calculations",
+                    "https://hack.do.oliverwisler.ch/backend/calculations",
                     {location:searchTerm,filter:onlyOpened},
                      function(data){
                         console.log(data);
@@ -163,7 +163,7 @@
                             iconSize: [30, 35],
                         });
             
-                        map.flyTo([myLat, myLon], 11);
+                        map.flyTo([myLat, myLon], 12.2);
                         L.marker([myLat, myLon], {icon: coopIcon}).addTo(map);
                         L.geoJSON(data[0].features).addTo(map);  
                     });  
