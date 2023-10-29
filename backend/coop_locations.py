@@ -36,10 +36,50 @@ def get_unique_format_ids(lat, lng, numCoops):
 # # Usage:
 # lat = 47.543427  # Replace with the desired latitude
 # lng = 7.598133599999983  # Replace with the desired longitude
-# numCoops = 2233  # Replace with the desired number of Coop locations
+# numCoops = 2500  # Replace with the desired number of Coop locations
 
 # get_unique_format_ids(lat, lng, numCoops)
 
+import requests
+import json
+
+def fetch_swiss_cities():
+    overpass_url = "http://overpass-api.de/api/interpreter"
+    
+    # This query fetches all populated places (cities, towns, villages, etc.) in Switzerland.
+    overpass_query = """
+        [out:json];
+        area["ISO3166-1"="CH"][admin_level=2];
+        (node["place"~"city|town|village"](area);
+         way["place"~"city|town|village"](area);
+         relation["place"~"city|town|village"](area);
+        );
+        out center;
+    """
+    
+    response = requests.get(overpass_url, params={'data': overpass_query})
+    data = response.json()
+
+    cities = []
+    for element in data['elements']:
+        if 'tags' in element:
+            name = element['tags'].get('name', 'Unknown')
+            population = int(element['tags'].get('population', 0)) # Convert population to integer
+            cities.append((name, population))
+
+    # Sort cities by population in descending order
+    cities.sort(key=lambda x: x[1], reverse=True)
+
+    return cities
+
+def save_to_file(cities):
+    with open('swiss_cities_by_population.json', 'w', encoding='utf-8') as file:
+        json.dump(cities, file, ensure_ascii=False, indent=4)
+
+
+# cities = fetch_swiss_cities()
+# save_to_file(cities)
+# print(f"Data saved to swiss_cities_by_population.json.")
 
 
 
@@ -49,7 +89,7 @@ def getCoopLocations(locationName, search_radius=10, time_filter=True):
     def getOriginCoordinates(locationName):
         """Get the latitude and longitude of the given location name."""
         geolocator = Nominatim(user_agent="CoopFinder")
-        location = geolocator.geocode(f'{locationName}, Switzerland')
+        location = geolocator.geocode(f'{locationName}', country_codes="CH")  # Limit to Switzerland with country_codes="CH"
         if location is None:
             print(f'No location found for {locationName}, Switzerland')
             return None, None
@@ -124,14 +164,15 @@ def getCoopLocations(locationName, search_radius=10, time_filter=True):
                         openingTime, closingTime = timeRange
                         break
             
-            # Check if the coop is open now or will open soon, and remains open for at least the next 10 minutes
-            openStatus = is_open_now(coop) if time_filter else True
+            # Check if the coop is open now
+            openStatus = is_open_now(coop)
             
-            if formatId in food_offering_formats and distance <= search_radius * 1000 and openStatus:
+            if formatId in food_offering_formats and distance <= search_radius * 1000 and (not time_filter or openStatus):
                 qualified_coops.append(create_json(coop, openingTime, closingTime, openStatus))
             if len(qualified_coops) >= 10 or distance > search_radius * 1000:
                 break
         return qualified_coops
+
 
 
 
@@ -149,7 +190,7 @@ def getCoopLocations(locationName, search_radius=10, time_filter=True):
             'CityName': coop.get('ort'),
             'StreetName': coop.get('strasse'),
             'HouseNumber': coop.get('hausnummer'),
-            'Open': openStatus,
+            'Open': openStatus,   # This will be either True or False
             'OpeningTime': openingTime,
             'ClosingTime': closingTime
         }
