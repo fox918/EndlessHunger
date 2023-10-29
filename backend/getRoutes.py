@@ -1,6 +1,7 @@
 import requests
 import json
 import time
+from dotenv import load_dotenv
 import xml.etree.ElementTree as ET# Constructing the XML elements and attributes
 from coop_locations import getCoopLocations
 from concurrent.futures import ThreadPoolExecutor
@@ -10,9 +11,11 @@ def getRoute(coopLocations, routingProfile, originCoordinates):
     latitude = coopLocations.get("Latitude")
     body = {"coordinates": [[originCoordinates.get("Longitude"),originCoordinates.get("Latitude")], [longitude, latitude]]}
     
+    load_dotenv()
+    
     headers = {
         'Accept': 'application/json, application/geo+json, application/gpx+xml, img/png; charset=utf-8',
-        'Authorization': '5b3ce3597851110001cf6248bf3d9d3adcf5443db7ee91adc2489f2d',
+        'Authorization': authorization,
         'Content-Type': 'application/json; charset=utf-8'
     }
     # Use the routing profile variable in the URL
