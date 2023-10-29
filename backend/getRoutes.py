@@ -1,8 +1,9 @@
 import requests
 import json
+import time
 import xml.etree.ElementTree as ET# Constructing the XML elements and attributes
 from coop_locations import getCoopLocations
-
+from concurrent.futures import ThreadPoolExecutor
 
 def getRoute(coopLocations, routingProfile, originCoordinates):
     longitude = coopLocations.get("Longitude")
@@ -39,8 +40,15 @@ def getAllRoutes(routingProfile, coopLocations,originCoordinates):
 
     elif routingProfile == "driving-car" or routingProfile == "cycling-regular" or routingProfile == "foot-walking" or routingProfile == "wheelchair":
 
-        routes = list(map(lambda x: getRoute(x, routingProfile,originCoordinates), coopLocations))
-
+        # routes = list(map(lambda x: getRoute(x, routingProfile,originCoordinates), coopLocations))
+        routes = []
+        with ThreadPoolExecutor(max_workers=5) as executor:  # Du kannst die Anzahl der parallelen Threads anpassen
+            futures = [executor.submit(getRoute, x, routingProfile, originCoordinates) for x in coopLocations]
+            for future in futures:
+                time.sleep(0.1)
+                result = future.result()
+                if result:
+                    routes.append(result)
         with open('routes.json', 'w') as json_file:
             json.dump(routes, json_file, indent=4)  # Save the JSON to a file with indentation
         print ("Routes saved")
@@ -57,5 +65,5 @@ def getAllRoutes(routingProfile, coopLocations,originCoordinates):
         print("Wrong Routing Profile", routingProfile)
 
 if __name__ == '__main__':
-    originCoordinates, coopLocations = getCoopLocations("Basel", 10, time_filter=False)
+    originCoordinates, coopLocations = getCoopLocations("Basel", time_filter=False)
     ans = getAllRoutes("driving-car", coopLocations, originCoordinates)
