@@ -1,11 +1,11 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta id="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
         crossorigin=""/>
@@ -71,8 +71,20 @@
 
 
   <header>
-    <input type="text" id="myInput" placeholder="Search..." size="50" style = "position:relative; left:9px;">
-
+    <div class="wrapper">
+        <div class="search-input">
+          <a href="" target="_blank" hidden></a>
+          <input type="text" id="myInput" placeholder="Type to search..">
+          <div class="autocom-box">
+            <!-- here list are inserted from javascript -->
+          </div>
+          <div class="icon"><i ></i></div>
+        </div>
+      </div>
+  
+      <script src="js/suggestions.js"></script>
+      <script src="js/script.js"></script>
+	  
     <button type="button" id="search" class = "left_el">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
@@ -132,6 +144,36 @@
     <script>
         var map = L.map('map').setView([46.8,8.13], 8);
     
+        const getRouteData = (searchTerm,data) => {
+            $.getJSON(
+                    "https://basel.do.oliverwisler.ch/backend/routeing",
+                    {location:searchTerm,routingprofile:data},
+                     function(data){
+                        console.log(data);
+                        markerLayer.clearLayers();
+                        
+                        data.forEach((element) => {
+                            const lat = parseFloat(element.Latitude);
+                            const lon = parseFloat(element.Longitude);
+                            L.marker([lat,lon]).addTo(markerLayer);
+
+                            
+                            
+                        })
+                        const myLat = parseFloat(data[0].coordinates[0][1]);
+                        const myLon = parseFloat(data[0].coordinates[0][0]);
+                        
+                        var coopIcon = L.icon({
+                            iconUrl: 'src/myLocationIcon.jpg',
+                            iconSize: [30, 35],
+                        });
+            
+                        map.flyTo([myLat, myLon], 12.2);
+                        L.marker([myLat, myLon], {icon: coopIcon}).addTo(markerLayer);
+                        L.geoJSON(data[0].features).addTo(markerLayer);  
+                    });
+        }
+
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
             attribution: '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
@@ -150,41 +192,74 @@
                      function(data){
                         console.log(data);
                         markerLayer.clearLayers();
+                        $("#coops").empty();
                         
                         data.forEach((element) => {
                             const lat = parseFloat(element.Latitude);
                             const lon = parseFloat(element.Longitude);
                             L.marker([lat,lon]).addTo(markerLayer);
 
-                            
+                            const tableBlock = $("#coops").append(`<tr>\
+                                                <td>${element.Name}</td>\
+                                                <td> ${parseFloat(element.Distance)/1000}km</td>\
+                                            </tr>\
+                                            <tr>\
+                                                <td>${element.StreetName} ${element.HouseNumber}, ${element.CityName}</td>\
+                                                <td> </td>\
+                                            </tr> \
+                                            <tr>\
+                                                <td><hr></td>\
+                                                <td><hr></td>\
+                                            </tr>`);
+
                             
                         })
-                        const myLat = parseFloat(data[0].coordinates[0][1]);
-                        const myLon = parseFloat(data[0].coordinates[0][0]);
+                        const myLat = parseFloat(data[0].coordinates[1]);
+                        const myLon = parseFloat(data[0].coordinates[0]);
+                        
                         var coopIcon = L.icon({
                             iconUrl: 'src/myLocationIcon.jpg',
                             iconSize: [30, 35],
                         });
-            
+                        
+                        
+
+                      
+
                         map.flyTo([myLat, myLon], 12.2);
                         L.marker([myLat, myLon], {icon: coopIcon}).addTo(markerLayer);
-                        L.geoJSON(data[0].features).addTo(markerLayer);  
-                    });  
+                        //L.geoJSON(data[0].features).addTo(markerLayer);  
+                    });
                    
             });
         
+            $("#onFeet").click(function(){
+                const searchTerm = $("#myInput").val().trim();
+                getRouteData(searchTerm,"foot-walking")
+            });
+            $("#onBycicle").click(function(){
+                const searchTerm = $("#myInput").val().trim();
+                getRouteData(searchTerm,"cycling-regular")
+            });
+            $("#byCar").click(function(){
+                const searchTerm = $("#myInput").val().trim();
+                getRouteData(searchTerm,"driving-car")
+            });
+            $("#byHelicopter").click(function(){
+                const searchTerm = $("#myInput").val().trim();
+                getRouteData(searchTerm,"foot-walking")
+            });
         });
         </script>
   </section>
  
   <aside>  
-  
+  <table id="coops">
+        
+  </table>
 
   </aside>
- 
-  <footer>
-    Fusszeile 
-  </footer>
+
 
 </main>   
 </body>
