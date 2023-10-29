@@ -45,7 +45,7 @@ def getAllRoutes(routingProfile, coopLocations,originCoordinates):
         with ThreadPoolExecutor(max_workers=5) as executor:  # Du kannst die Anzahl der parallelen Threads anpassen
             futures = [executor.submit(getRoute, x, routingProfile, originCoordinates) for x in coopLocations]
             for future in futures:
-                time.sleep(1)
+                time.sleep(0.1)
                 result = future.result()
                 if result:
                     routes.append(result)
