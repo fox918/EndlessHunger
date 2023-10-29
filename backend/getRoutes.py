@@ -3,12 +3,11 @@ import json
 import xml.etree.ElementTree as ET# Constructing the XML elements and attributes
 from coop_locations import getCoopLocations
 
-originCoordinates, coopLocations = getCoopLocations("Basel", 10, time_filter=False)
 
-def getRoute(coopLocations, routingProfile):
+def getRoute(coopLocations, routingProfile, originCoordinates):
     longitude = coopLocations.get("Longitude")
     latitude = coopLocations.get("Latitude")
-    body = {"coordinates": [[8.681495, 49.41461], [longitude, latitude]]}
+    body = {"coordinates": [[originCoordinates.get("Longitude"),originCoordinates.get("Latitude")], [longitude, latitude]]}
     
     headers = {
         'Accept': 'application/json, application/geo+json, application/gpx+xml, img/png; charset=utf-8',
@@ -26,13 +25,13 @@ def getRoute(coopLocations, routingProfile):
         route = json.loads(call.text)  # Parse the JSON response
         print("Route calculated")
 
-        coop = {**route, **coopLocations}
+        coop = {**body, **coopLocations, **route}
 
         return coop
     else:
         print("Request was not successful. Status code:", call.status_code)
 
-def getAllRoutes(routingProfile, coopLocations):
+def getAllRoutes(routingProfile, coopLocations,originCoordinates):
 
     if routingProfile == "publicTransport":
         
@@ -40,7 +39,7 @@ def getAllRoutes(routingProfile, coopLocations):
 
     elif routingProfile == "driving-car" or routingProfile == "cycling-regular" or routingProfile == "foot-walking" or routingProfile == "wheelchair":
 
-        routes = list(map(lambda x: getRoute(x, routingProfile), coopLocations))
+        routes = list(map(lambda x: getRoute(x, routingProfile,originCoordinates), coopLocations))
 
         with open('routes.json', 'w') as json_file:
             json.dump(routes, json_file, indent=4)  # Save the JSON to a file with indentation
@@ -58,4 +57,5 @@ def getAllRoutes(routingProfile, coopLocations):
         print("Wrong Routing Profile", routingProfile)
 
 if __name__ == '__main__':
-    ans = getAllRoutes("driving-car", coopLocations)
+    originCoordinates, coopLocations = getCoopLocations("Basel", 10, time_filter=False)
+    ans = getAllRoutes("driving-car", coopLocations, originCoordinates)
